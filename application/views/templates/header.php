@@ -41,19 +41,23 @@
 	          <div class="input-group">
 	            <input type="text" class="form-control" placeholder="Search">
 	            <span class="input-group-append">
-	            <button class="btn btn-outline-secondary bg-secondary text-white" type="button">Search</button>
+	            <button class="btn btn-outline-secondary bg-secondary text-white mr-3" type="button">Search</button>
 	            </span>
 	          </div>
 	        </form>
-	        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-	        	<div class="navbar-nav">
-			        <a class="nav-item nav-link mr-3" href="#">Cart
-	     			<a class="nav-item nav-link text-info" href="#">Login</a>
-	     			<a class="nav-item nav-link text-success" href="#">Daftar</a>
-		    	</div>
-	    	</nav>
+			    <a class="nav-item nav-link mr-3 ml-3 text-secondary" href="#">Cart</a>
 	      </div>
       </div>
+      	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	        <div class="navbar-nav">
+			    <span class="border">
+	     		<a class="nav-item nav-link text-info mr-3 ml-3" href="#">Login</a>
+	     		</span>
+	     		<span class="border">
+	     		<a class="nav-item nav-link text-success mr-3 ml-3" href="#">Daftar</a>
+	     		</span>
+		    </div>
+	    </nav>
     </nav>
   </div>
 
