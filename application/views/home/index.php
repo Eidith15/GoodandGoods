@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row mt-5">
-    <div class="col-md-5">
+    <div class="col-md-3">
       <a class="text-decoration-none text-body" href="">
-        <div class="card" style="width: 18rem;">
+        <div class="card hover-card">
           <img src="<?= base_url(); ?>assets/download.jpg" class="card-img-top" alt="...">
           <div class="card-body">
               <hr>
