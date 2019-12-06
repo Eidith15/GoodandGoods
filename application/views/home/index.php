@@ -3,7 +3,7 @@
     <div class="col-md-3">
       <a class="text-decoration-none text-body" href="">
         <div class="card hover-card">
-          <img src="<?= base_url(); ?>assets/download.jpg" class="card-img-top" alt="...">
+          <img src="<?= base_url(); ?>assets/img/download.jpg" class="card-img-top" alt="...">
           <div class="card-body">
               <hr>
               <h5>Nama Barang</h5>
