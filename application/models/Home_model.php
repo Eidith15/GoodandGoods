@@ -17,7 +17,6 @@ class Home_model extends CI_model{
 	}
 
 	public function hapusDataBarang($id){
-		// $this->db->where('id', $id);
 		$this->db->delete('barang', ['id_barang' => $id]);
 	}
 
