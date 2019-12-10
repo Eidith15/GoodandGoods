@@ -14,7 +14,7 @@ class Home extends CI_Controller {
 		// if ($this->input->post('keyword')) {
 		// 	$data['barang'] = $this->Home_model->cariDataBarang();
 		// }
-
+		$data['kategori'] = $this->Mkeranjang->get_kategori_all();
 		$this->load->view('templates/header', $data);
 		$this->load->view('home/index', $data);
 		$this->load->view('templates/footer');
