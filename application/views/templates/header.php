@@ -26,7 +26,7 @@
   <div class="shadow">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     	<div class="container">
-	      <a class="navbar-brand" href="#">GOOD & GOODS</a>
+	      <a class="navbar-brand" href="<?= base_url() ?>home">GOOD & GOODS</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="navbar-toggler-icon"></span>
 	      </button>
@@ -54,7 +54,7 @@
 	          </div>
 	        </form>
 	        	<span class="border-left">
-			    <a class="nav-item nav-link mr-3 ml-3 text-secondary" href="#">Cart</a>
+			    <a class="nav-item nav-link mr-3 ml-3 text-secondary" href="shopping/tampil_cart">Cart</a>
 			    </span>
 			    <div class="navbar-nav">
 			    <span class="border-left">

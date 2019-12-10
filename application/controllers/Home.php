@@ -4,7 +4,9 @@ class Home extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
+		$this->load->library('cart');
 		$this->load->model('Home_model');
+		// $this->load->model('MKeranjang');
 	}
 
 
@@ -14,7 +16,7 @@ class Home extends CI_Controller {
 		// if ($this->input->post('keyword')) {
 		// 	$data['barang'] = $this->Home_model->cariDataBarang();
 		// }
-		$data['kategori'] = $this->Mkeranjang->get_kategori_all();
+		// $data['kategori'] = $this->Mkeranjang->get_kategori_all();
 		$this->load->view('templates/header', $data);
 		$this->load->view('home/index', $data);
 		$this->load->view('templates/footer');

@@ -55,7 +55,7 @@ class Shopping extends CI_Controller {
                              'qty' =>$this->input->post('qty')
                             );
         $this->cart->insert($data_produk);
-        redirect('shopping');
+        redirect('home');
     }
  
     function hapus($rowid)
