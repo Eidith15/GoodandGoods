@@ -46,7 +46,8 @@ class Register extends CI_Controller {
 		if ($this->form_validation->run() == false) {
 			$data['title'] = 'User Register';
 			$this->load->view('account/register', $data);
-			//echo "haia";
+            //echo "haia";
+            
 		} else {
 			  $data = ['firstname' => htmlspecialchars($this->input->post('firstname', true)),
 			  		'lastname' => htmlspecialchars($this->input->post('lastname', true)),
