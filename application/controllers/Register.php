@@ -28,7 +28,7 @@ class Register extends CI_Controller {
 	{
         $data['title'] = 'User Register';
         $this->load->view('templates/header' ,$data);  
-        $this->load->view('account/register', $data);
+        $this->load->view('account/register');
         $this->load->view('templates/footer');
         
 	}
