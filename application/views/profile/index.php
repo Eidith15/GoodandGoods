@@ -10,30 +10,30 @@
   <div class="col-7">
     <div class="tab-content" id="v-pills-tabContent">
       <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-        
-      <div class="container">
-          <div class="row mt-4">
-              <div class="col-md-8">
-                  <div class="card">
-                      <div class="card-header">
-                       Profile saya
-                      </div>
-                      <ul class="list-group">
-                      <li class="list-group-item">
-                      <div class="row">
-                      <h4>Nama :</h4><p> Cras justo odio</p>
-                      </div>
-                      </li>
-                      <li class="list-group-item">Dapibus ac facilisis in</li>
-                      <li class="list-group-item">Morbi leo risus</li>
-                      <li class="list-group-item">Porta ac consectetur ac</li>
-                      <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
-                                      </div>
-              </div>
-          </div>
 
-      </div>
+      <h1>Atur Akun saya</h1> 
+
+            <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Profile Personal</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Ubah Profile</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Alamat Saya</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Ubah Alamat</a>
+            </div>
+          </div>
+        </div>
+      </div> 
+      
 
 
 
