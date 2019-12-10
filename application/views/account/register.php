@@ -1,6 +1,6 @@
-<html>
+<!-- <html>
     <head>
-		<title><?= $title; ?></title>
+		<title></title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >  
         <style type="text/css">  
         .form-box{  
@@ -8,17 +8,20 @@
         position: relative;  
         margin: 5% auto;  
         }  
-   </style>  
+        </style>  
 		
     </head>
     <body>
-        <!-- <h1>Selamat Datang</h1> -->
+        <h1>Selamat Datang</h1>
 
   </head>
-  <body>
-    
+  <body> -->
+
+ 
+ 
+
     <div class="wrapper">  
-    <div class="container">  
+    <div class="container regist">  
      <div class="row">  
       <div class="form-box">  
        <div class="panel panel-primary">  
@@ -83,8 +86,8 @@
     </div>  
    </div>  
    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>  
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>  
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 
-    </body>
-</html>
+    <!-- </body>
+</html> -->
