@@ -27,8 +27,8 @@ class Register extends CI_Controller {
 	public function index()
 	{
         $data['title'] = 'User Register';
-        $this->load->view('templates/header');  
-        $this->load->view('account/register', $data);
+        $this->load->view('templates/header' ,$data);  
+        $this->load->view('account/register');
         $this->load->view('templates/footer');
         
 	}
@@ -58,9 +58,11 @@ class Register extends CI_Controller {
 			  	'password' => password_hash(htmlspecialchars($this->input->post('password')), PASSWORD_DEFAULT),    
 			  		]; 
  
-    			$this->db->insert('user', $data);
+				$this->db->insert('user', $data);
+				
     			 $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Congratulation! your account has been created. Please Login</div>');     
-    			  redirect('register'); 
+				//   
+				redirect('Register/index');
 		}
 	}
 }
