@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+	<title><?= $judul ?></title>
+
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,52 +16,6 @@
 
 	<!-- My CSS -->
 	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/style.css">
-
-
-<<<<<<< HEAD
-<div class="container m-5 ">
-  <div class="row">
- 
-        <div class="col-lg-3">
-
-
-<div class="list-group">
-           <a href="<?php echo base_url()?>shopping/tampil_cart" class="list-group-item"><strong><i class="glyphicon glyphicon-shopping-cart"></i> KERANJANG BELANJA</strong></a>
-          <?php 
- 
-            $cart= $this->cart->contents();
- 
-// If cart is empty, this will show below message.
-            if(empty($cart)) {
-                ?>
-                <a class="list-group-item">Keranjang Belanja Kosong</a>
-                <?php
-            }
-            else
-                {
-                    $grand_total = 0;
-                    foreach ($cart as $item)
-                        {
-                            $grand_total+=$item['subtotal'];
-                ?>
-                <a class="list-group-item"><?php echo $item['name']; ?> (<?php echo $item['qty']; ?> x <?php echo number_format($item['price'],0,",","."); ?>)=<?php echo number_format($item['subtotal'],0,",","."); ?></a>
-                <?php
-                        }
-                ?>
- 
-                <?php
-                }
- ?>
-            </div>
-        </div>
-        <!-- /.col-lg-3 -->
- 
-        <div class="col-lg-9 mt-5">
-	
-=======
-
-	<title><?= $title; ?></title>
-
 
 
 </head>
@@ -97,7 +53,7 @@
 						</div>
 					</form>
 					<span class="border-left">
-						<a class="nav-item nav-link mr-3 ml-3 text-secondary" href="shopping/tampil_cart">Cart</a>
+						<a class="nav-item nav-link mr-3 ml-3 text-secondary" href="<?= base_url() ?>shopping/tampil_cart">Cart</a>
 					</span>
 					<div class="navbar-nav">
 						<span class="border-left">
@@ -111,4 +67,92 @@
 			</div>
 		</nav>
 	</div>
->>>>>>> 9145e4e3e84bfbf3a0fcf5c6ce9f51f5f9c92450
+
+<!-- End navbar -->
+
+<!-- slidder -->
+<div class="bd-example sliderr mb-5">
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="<?= base_url() ?>/assets/img/2.JPG" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="<?= base_url() ?>/assets/img/3.JPG" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="<?= base_url() ?>/assets/img/4.JPG" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- end slider -->
+
+<!-- Bagian Keranjang static -->
+	<div class="container mt-5">
+  <div class="row">
+ 
+        <div class="col-lg-3">
+
+
+<div class="list-group">
+           <a href="<?php echo base_url()?>shopping/tampil_cart" class="list-group-item"><strong><i class="glyphicon glyphicon-shopping-cart"></i> KERANJANG BELANJA</strong></a>
+          <?php 
+ 
+            $cart= $this->cart->contents();
+ 
+// If cart is empty, this will show below message.
+            if(empty($cart)) {
+                ?>
+                <a class="list-group-item">Keranjang Belanja Kosong</a>
+                <?php
+            }
+            else
+                {
+                    $grand_total = 0;
+                    foreach ($cart as $item)
+                        {
+                            $grand_total+=$item['subtotal'];
+                ?>
+                <a class="list-group-item"><?php echo $item['name']; ?> (<?php echo $item['qty']; ?> x <?php echo number_format($item['price'],0,",","."); ?>)=<?php echo number_format($item['subtotal'],0,",","."); ?></a>
+                <?php
+                        }
+                ?>
+ 
+                <?php
+                }
+ ?>
+            </div>
+        </div>
+        <!-- /.col-lg-3 -->
+ 
+        <div class="col-lg-9 mt-5">
+<!-- END Bagian Keranjang static -->
+
+

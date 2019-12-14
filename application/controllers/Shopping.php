@@ -22,6 +22,7 @@ class Shopping extends CI_Controller {
     }
     public function tampil_cart()
     {
+        $data['judul'] = 'Keranjang';
         $data['kategori'] = $this->Mkeranjang->get_kategori_all();
         $this->load->view('templates/header',$data);
         $this->load->view('shopping/tampil_cart',$data);
