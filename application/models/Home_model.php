@@ -4,6 +4,22 @@ class Home_model extends CI_model{
 		return $query = $this->db->get('barang')->result_array();
 	}
 
+	public function get_produk_kategori($kategori)
+    {
+        if($kategori>0)
+            {
+                $this->db->where('kategori',$kategori);
+            }
+        $query = $this->db->get('barang');
+        return $query->result_array();
+    }
+
+    public function get_kategori_all()
+    {
+        $query = $this->db->get('kategori');
+        return $query->result_array();
+    }
+
 	public function tambahDataBarang(){
 		$data = [
 			"nama_barang" => $this->input->post('nama_barang', true),

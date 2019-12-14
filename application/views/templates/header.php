@@ -79,6 +79,19 @@
  
         <div class="col-lg-3">
 
+        	<div class="list-group">
+            <a class="list-group-item"><strong>KATEGORI</strong></a>
+            <a href="<?= base_url()?>home/index/" class="list-group-item">Semua</a>
+            <?php
+                    foreach ($kategori as $row)
+                        {
+            ?>
+            <a href="<?php echo base_url()?>home/index/<?php echo $row['id'];?>" class="list-group-item"><?php echo $row['nama_kategori'];?></a>
+            <?php
+                        }
+            ?>
+          </div><br>
+
 
 <div class="list-group">
            <a href="<?php echo base_url()?>shopping/tampil_cart" class="list-group-item"><strong><i class="glyphicon glyphicon-shopping-cart"></i> KERANJANG BELANJA</strong></a>

@@ -13,6 +13,10 @@ class Home extends CI_Controller {
 	public function index(){
 		$data['judul'] = 'Home';
 		$data['barang'] = $this->Home_model->getAllBarang();
+		$kategori=($this->uri->segment(3))?$this->uri->segment(3):0;
+		$data['barang'] = $this->Home_model->get_produk_kategori($kategori);
+		$data['kategori'] = $this->Home_model->get_kategori_all();
+
 		// if ($this->input->post('keyword')) {
 		// 	$data['barang'] = $this->Home_model->cariDataBarang();
 		// }
