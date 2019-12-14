@@ -41,10 +41,10 @@
                     <a href="#"><?php echo $brg['nama_barang'];?></a>
                   </h4>
                   <h5>Rp. <?php echo number_format($brg['harga_barang'],0,",",".");?></h5>
-                  <p class="card-text"><?php echo $brg['deskripsi_barang'];?></p>
+                  <!-- <p class="card-text"><?php echo $brg['deskripsi_barang'];?></p> -->
                 </div>
                 <div class="card-footer">
-                  <a href="<?php echo base_url();?>shopping/detail_produk/<?php echo $brg['id_barang'];?>" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-search"></i> Detail</a> 
+                  <a href="<?php echo base_url();?>home/detail/<?= $brg['id_barang']; ?>" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-search"></i> Detail</a> 
  
  
                   <input type="hidden" name="id" value="<?php echo $brg['id_barang']; ?>" />

@@ -42,7 +42,7 @@ class Shopping extends CI_Controller {
         $data['kategori'] = $this->Mkeranjang->get_kategori_all();
         $data['detail'] = $this->Mkeranjang->get_produk_id($id)->row_array();
         $this->load->view('templates/header',$data);
-        $this->load->view('shopping/detail_produk',$data);
+        $this->load->view('home/detail',$data);
         $this->load->view('templates/footer');
     }
  
