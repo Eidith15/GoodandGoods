@@ -25,7 +25,9 @@
   }
 
 
-
+.detail-desc {
+  float: right;
+}
   .sliderr {
     margin: 0;
   }
