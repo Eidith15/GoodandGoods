@@ -2,10 +2,10 @@
  
 
 
-<!-- <div class="container">
+ <div class="container">
   <div class="row mt-5">
     <?php foreach($barang as $brg) : ?>
-    <div class="col-md-3 mb-3">
+    <div class="col-md-4 mb-3">
       <a class="text-decoration-none text-body" href="<?= base_url(); ?>/home/detail/<?=$brg['id_barang'] ?>">
         <div class="card hover-card h-100" >
           <div>
@@ -19,13 +19,22 @@
                 
           </div>
           <div class="card-footer bg-transparent">
-            <h6 class="card-text">Harga : Rp.<?= $brg['harga_barang'] ?>,-</h6>
+            <h6 class="card-text">Harga : Rp. <?= number_format($brg['harga_barang'],0,",",".");?>,-</h6>
           </div>
+          <form method="post" action="<?php echo base_url();?>shopping/tambah" method="post" accept-charset="utf-8">
+            <input type="hidden" name="id" value="<?= $brg['id_barang']; ?>" />
+            <input type="hidden" name="nama" value="<?= $brg['nama_barang']; ?>" />
+            <input type="hidden" name="harga" value="<?= $brg['harga_barang']; ?>" />
+            <input type="hidden" name="gambar" value="<?= $brg['image_barang']; ?>" />
+            <input type="hidden" name="qty" value="1" />
+            <button type="submit" class="btn btn-sm btn-success w-100 glyphicon glyphicon-shopping-cart"> Tambah ke Keranjang</button>
+            </form>
         </div>
       </a>
     </div>
     <?php endforeach; ?>
   </div>
+<<<<<<< HEAD
 </div> -->
 
 
@@ -60,3 +69,6 @@
 <?php endforeach; ?>
   </div>
 </div>
+=======
+</div> 
+>>>>>>> 9145e4e3e84bfbf3a0fcf5c6ce9f51f5f9c92450
