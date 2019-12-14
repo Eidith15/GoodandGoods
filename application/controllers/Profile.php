@@ -11,9 +11,10 @@ class profile extends CI_Controller {
 		// 	$data['barang'] = $this->Home_model->cariDataBarang();
 		// }
 
-		$this->load->view('templates/header', $data);
+		$this->load->view('templates/header2', $data);
 		$this->load->view('Profile/index', $data);
 		$this->load->view('templates/footer');
+		
 	}
 
 	
