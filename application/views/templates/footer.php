@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!-- Footer -->
 <footer class="page-footer font-small blue-grey lighten-5">
 
@@ -145,6 +146,10 @@
 <!-- Footer -->
 =======
   <!-- Optional JavaScript -->
+=======
+
+    <!-- Optional JavaScript -->
+>>>>>>> 24c68b70dc2a443f869ad0ed61f9472a7d26e0f6
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

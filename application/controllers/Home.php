@@ -21,17 +21,16 @@ class Home extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
-// 	public function detail($id){
-// 		$data['judul'] = 'Detail Buku';
-// 		$kategori=($this->uri->segment(3))?$this->uri->segment(3):0;
-// 		$data['barang'] = $this->Home_model->get_produk_kategori($kategori);
-// 		$data['kategori'] = $this->Home_model->get_kategori_all();
-// 		$data['barang'] = $this->Home_model->getBarangById($id);
-// 		$this->load->view('templates/header', $data);
-// 		$this->load->view('home/detail', $data);
-// 		$this->load->view('templates/footer');
-// 	}
-// }
+	public function detail($id){
+		$data['judul'] = 'Detail Buku';
+		$kategori=($this->uri->segment(3))?$this->uri->segment(3):0;
+		$data['barang'] = $this->Home_model->get_produk_kategori($kategori);
+		$data['kategori'] = $this->Home_model->get_kategori_all();
+		$data['barang'] = $this->Home_model->getBarangById($id);
+		$this->load->view('templates/header', $data);
+		$this->load->view('home/detail', $data);
+		$this->load->view('templates/footer');
+	}
 
 }
 
