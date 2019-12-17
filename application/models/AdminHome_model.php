@@ -1,6 +1,5 @@
 <?php 
-class Home_model extends CI_model{
-	
+class AdminHome_model extends CI_model{
 	public function getAllBarang(){
 		return $query = $this->db->get('barang')->result_array();
 	}
@@ -53,7 +52,7 @@ class Home_model extends CI_model{
 		$this->db->where('id_barang', $this->input->post('id_barang'));
 		$this->db->update('barang', $data);
 	}
-
+  
 	public function cariDataBarang(){
 		$keyword = $this->input->post('keyword', true);
 		$this->db->like('nama_barang', $keyword);

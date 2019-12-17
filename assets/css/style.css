@@ -13,6 +13,33 @@
  }
 
 .hover-card:hover { 
-  	box-shadow: 0 0 15px rgba(33,33,33,.2);
+  	box-shadow: 0 0 20px rgba(33,33,33,.2);
   	transform: scale(1.015);
  }
+
+  
+ .form-box{  
+  max-width: 500px;  
+  position: relative;  
+  margin: 5% auto;  
+  }
+
+
+.detail-desc {
+  float: right;
+}
+  .sliderr {
+    margin: 0;
+  }
+
+<<<<<<< HEAD
+body{
+  margin:0;
+<<<<<<< HEAD
+  
+=======
+>>>>>>> 5de41278fc638b81ce1532beafa3210cb9262be0
+}
+=======
+/*  */
+>>>>>>> 13b70713ebfa6dc373e8da1245f913b5de9a1c2a

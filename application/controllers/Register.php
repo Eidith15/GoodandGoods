@@ -26,8 +26,10 @@ class Register extends CI_Controller {
 	}
 	public function index()
 	{
-		$data['title'] = 'User Register';
-		$this->load->view('account/register', $data);
+        $data['title'] = 'User Register';
+        $this->load->view('templates/header3', $data);
+        $this->load->view('account/register', $data);
+        $this->load->view('templates/footer');
 	}
 
 	
@@ -35,8 +37,8 @@ class Register extends CI_Controller {
 	public function register()
 	{
 
-		$this->form_validation->set_rules('firstname', 'First Name', 'required|trim');
-		$this->form_validation->set_rules('lastname', 'Last Name', 'required|trim');
+		$this->form_validation->set_rules('fullname', 'Full Name', 'required|trim');
+		// $this->form_validation->set_rules('lastname', 'Last Name', 'required|trim');
 		$this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[user.email]', ['is_unique' => 'This email has a already registered!']);
 		$this->form_validation->set_rules('password', 'Password', 'required|trim|min_length[3]|matches[confirmpassword]', [
 				'matches' => 'Password dont match!',
@@ -44,20 +46,22 @@ class Register extends CI_Controller {
 		$this->form_validation->set_rules('confirmpassword', 'Password', 'required|trim|matches[password]');
 
 		if ($this->form_validation->run() == false) {
-			$data['title'] = 'User Register';
-			$this->load->view('account/register', $data);
-            //echo "haia";
-            
+			$data['title'] = 'Register';
+
+        	$this->load->view('templates/header3', $data);
+        	$this->load->view('account/register', $data);
+        	$this->load->view('templates/footer');			//echo "haia";
 		} else {
-			  $data = ['firstname' => htmlspecialchars($this->input->post('firstname', true)),
-			  		'lastname' => htmlspecialchars($this->input->post('lastname', true)),
-			   'email' => htmlspecialchars($this->input->post('email', true)),
-			  	'password' => password_hash(htmlspecialchars($this->input->post('password')), PASSWORD_DEFAULT),    
-			  		]; 
+			  $data = [
+				'fullname' => htmlspecialchars($this->input->post('fullname', true)),
+			    //'lastname' => htmlspecialchars($this->input->post('lastname', true)),
+			    'email' => htmlspecialchars($this->input->post('email', true)),
+				  'password' => password_hash(htmlspecialchars($this->input->post('password')), PASSWORD_DEFAULT)   
+			  	]; 
  
     			$this->db->insert('user', $data);
-    			 $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Congratulation! your account has been created. Please Login</div>');     
-    			  redirect('register'); 
+    			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Congratulation! your account has been created. Please Login</div>');     
+    			redirect('Login'); 
 		}
 	}
 }
