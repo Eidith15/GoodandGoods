@@ -48,7 +48,7 @@ $grand_total = $grand_total + $item['subtotal'];
 
 <button class ="btn btn-danger"><a data-toggle="modal" data-target="#myModal"   rel="noopener noreferrer">Kosongkan Cart</a></button>
 <button class='btn btn-sm btn-success'  type="submit">Update Cart</button>
-<a href="<?php echo base_url()?>shopping/check_out"  class ='btn btn-sm btn-primary'>Check Out</a>
+<a href="<?=base_url()?>shopping/check_out"  class ='btn btn-sm btn-primary'>Check Out</a>
 </tr>
  
 </table>
