@@ -8,7 +8,7 @@
                     </div>
                     <div class="panel-body">
 
-                        <form action="<?= base_url('auth/registration'); ?>" method="post" class="user">
+                        <form action="<?= base_url('registration'); ?>" method="post" class="user">
 
                             <div class="form-group">
                                 <label class="control-label" for="email">Fullname</label>
@@ -50,7 +50,7 @@
                             <a class="small" href="#">Forgot Password?</a>
                         </div>
                         <div class="text-center">
-                            <a class="small" href="<?= base_url('auth'); ?>">Already have an account? Login!</a>
+                            <a class="small" href="#">Already have an account? Login!</a>
                         </div>
                     </div>
                     <div class="panel-footer text-center">

@@ -44,7 +44,7 @@
   <div class="row ">
     <?php foreach($barang as $brg) : ?>
     <div class="col-md-4 mb-2 mt-5">
-      <a class="text-decoration-none text-body" href="<?= base_url(); ?>/home/detail/<?=$brg['id_barang'] ?>">
+      <a class="text-decoration-none text-body" href="<?= base_url(); ?>buku/detail/<?=$brg['id_barang'] ?>">
         <div class="card hover-card h-100" >
           <div>
           <img src="<?= base_url();  ?>assets/img/<?= $brg['image_barang'] ?>" class="card-img-top" height="300">

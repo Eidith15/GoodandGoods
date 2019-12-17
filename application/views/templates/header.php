@@ -57,10 +57,10 @@
 					</span>
 					<div class="navbar-nav">
 						<span class="border-left">
-							<a class="nav-item nav-link text-info mr-3 ml-3 btn" href="<?= base_url() ?>login/">Login</a>
+							<a class="nav-item nav-link text-info mr-3 ml-3 btn" href="<?= base_url('login') ?>">Login</a>
 						</span>
 						<span class="border-left">
-							<a class="nav-item nav-link text-success mr-3 ml-3" href="account/registration">Daftar</a>
+							<a class="nav-item nav-link text-success mr-3 ml-3" href="#">Daftar</a>
 						</span>
 					</div>
 				</div>
