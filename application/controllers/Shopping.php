@@ -11,15 +11,6 @@ class Shopping extends CI_Controller {
         $this->load->model('Mkeranjang');
     }
  
-    public function index()
-    {
-        $kategori=($this->uri->segment(3))?$this->uri->segment(3):0;
-        $data['produk'] = $this->Mkeranjang->get_produk_kategori($kategori);
-        $data['kategori'] = $this->Mkeranjang->get_kategori_all();
-        $this->load->view('templates/header',$data);
-        $this->load->view('shopping/list_produk',$data);
-        $this->load->view('templates/footer');
-    }
     public function tampil_cart()
     {
         $data['judul'] = 'Keranjang';
@@ -31,21 +22,13 @@ class Shopping extends CI_Controller {
  
     public function check_out()
     {
+        $data['judul'] = 'Check out';
         $data['kategori'] = $this->Mkeranjang->get_kategori_all();
         $this->load->view('templates/header',$data);
         $this->load->view('shopping/check_out',$data);
         $this->load->view('templates/footer');
     }
- 
-    public function detail_produk()
-    {
-        $id=($this->uri->segment(3))?$this->uri->segment(3):0;
-        $data['kategori'] = $this->Mkeranjang->get_kategori_all();
-        $data['detail'] = $this->Mkeranjang->get_produk_id($id)->row_array();
-        $this->load->view('templates/header',$data);
-        $this->load->view('home/detail',$data);
-        $this->load->view('templates/footer');
-    }
+
  
     function tambah()
     {
@@ -94,6 +77,8 @@ class Shopping extends CI_Controller {
         redirect('shopping/tampil_cart');
     }
  
+
+ //CeckOut
     public function proses_order()
     {
         //-------------------------Input data pelanggan--------------------------
@@ -122,7 +107,7 @@ class Shopping extends CI_Controller {
         $this->cart->destroy();
         $data['kategori'] = $this->Mkeranjang->get_kategori_all();
         $this->load->view('templates/header',$data);
-        $this->load->view('shopping/sukses',$data);
+        $this->load->view('shopping/order_sukses',$data);
         $this->load->view('templates/footer');
     }
 }
