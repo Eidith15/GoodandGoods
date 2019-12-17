@@ -14,25 +14,29 @@
                             <div class="form-group">
                                 <label class="control-label" for="fullname">Fullname</label>
                                 <div>
-                                    <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Full Name">
+                                    <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Full Name" value="<?= set_value('fullname'); ?>">
+                                    <?= form_error('fullname', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label" for="email">Email</label>
                                 <div>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="<?= set_value('email'); ?>">
+                                    <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label" for="password">Password</label>
                                 <div>
                                     <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                                    <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label" for="password">Confirm Password</label>
                                 <div>
                                     <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password">
+                                    <?= form_error('confirmpassword', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
                             </div>
                             <div class="form-group">
