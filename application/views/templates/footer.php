@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 <!-- Footer -->
 <footer class="page-footer font-small blue-grey lighten-5">
 
