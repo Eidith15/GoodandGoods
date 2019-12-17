@@ -10,7 +10,7 @@
                     <?= $this->session->flashdata('message'); ?>
 
                     <div class="panel-body">
-                        <form action="<?= base_url('auth'); ?>" method="post" class="user">
+                        <form action="<?= base_url('login'); ?>" method="post" class="user">
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="form-group has-feedback">
@@ -41,7 +41,7 @@
                             <a href="#" class="small">Forgot Password?</a>
                         </div>
                         <div class="text-center">
-                            <a href="<?= base_url('auth/registration'); ?>" class="small">Create an Account!</a>
+                            <a href="<?= base_url('Register'); ?>" class="small">Create an Account!</a>
                         </div>
                     </div>
                 </div>

@@ -5,9 +5,7 @@
                 <div class="panel panel-primary">
                     <div class="panel-heading text-center">
                         <h3>Register</h3>
-                    </div>
-
-                    
+                    </div> 
 
                     <div class="panel-body">
 
@@ -50,7 +48,7 @@
                             <a class="small" href="#">Forgot Password?</a>
                         </div>
                         <div class="text-center">
-                            <a class="small" href="<?= base_url('Register'); ?>">Already have an account? Login!</a>
+                            <a class="small" href="<?= base_url('Login'); ?>">Already have an account? Login!</a>
                         </div>
                     </div>
                     <div class="panel-footer text-center">

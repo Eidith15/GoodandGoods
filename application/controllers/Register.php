@@ -46,7 +46,7 @@ class Register extends CI_Controller {
 		$this->form_validation->set_rules('confirmpassword', 'Password', 'required|trim|matches[password]');
 
 		if ($this->form_validation->run() == false) {
-			$data['title'] = 'User Register';
+			$data['title'] = 'Register';
 
         	$this->load->view('templates/header3', $data);
         	$this->load->view('account/register', $data);
@@ -56,12 +56,12 @@ class Register extends CI_Controller {
 				'fullname' => htmlspecialchars($this->input->post('fullname', true)),
 			    //'lastname' => htmlspecialchars($this->input->post('lastname', true)),
 			    'email' => htmlspecialchars($this->input->post('email', true)),
-			  	'password' => password_hash(htmlspecialchars($this->input->post('password')), PASSWORD_DEFAULT)   
+				  'password' => password_hash(htmlspecialchars($this->input->post('password')), PASSWORD_DEFAULT)   
 			  	]; 
  
     			$this->db->insert('user', $data);
     			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Congratulation! your account has been created. Please Login</div>');     
-    			  redirect('Register'); 
+    			redirect('Login'); 
 		}
 	}
 }

@@ -57,10 +57,10 @@
 					</span>
 					<div class="navbar-nav">
 						<span class="border-left">
-							<a class="nav-item nav-link text-info mr-3 ml-3 btn" href="account/login">Login</a>
+							<a class="nav-item nav-link text-info mr-3 ml-3 btn" href="<?= base_url('login') ?>">Login</a>
 						</span>
 						<span class="border-left">
-							<a class="nav-item nav-link text-success mr-3 ml-3" href="account/registration">Daftar</a>
+							<a class="nav-item nav-link text-success mr-3 ml-3" href="<?= base_url('register') ?>">Daftar</a>
 						</span>
 					</div>
 				</div>
@@ -68,63 +68,57 @@
 		</nav>
 	</div>
 
-<!-- End navbar -->
+	<!-- End navbar -->
 
-<!-- slidder -->
+	<!-- slidder -->
 
 
-<!-- Bagian Keranjang static -->
+	<!-- Bagian Keranjang static -->
 	<div class="container mt-5">
-  <div class="row">
- 
-        <div class="col-lg-3">
+		<div class="row">
 
-        	<div class="list-group">
-            <a class="list-group-item"><strong>KATEGORI</strong></a>
-            <a href="<?= base_url()?>home/index/" class="list-group-item">Semua</a>
-            <?php
-                    foreach ($kategori as $row)
-                        {
-            ?>
-            <a href="<?php echo base_url()?>home/index/<?php echo $row['id'];?>" class="list-group-item"><?php echo $row['nama_kategori'];?></a>
-            <?php
-                        }
-            ?>
-          </div><br>
+			<div class="col-lg-3">
 
-
-<div class="list-group">
-           <a href="<?php echo base_url()?>shopping/tampil_cart" class="list-group-item"><strong><i class="glyphicon glyphicon-shopping-cart"></i> KERANJANG BELANJA</strong></a>
-          <?php 
- 
-            $cart= $this->cart->contents();
- 
-// If cart is empty, this will show below message.
-            if(empty($cart)) {
-                ?>
-                <a class="list-group-item">Keranjang Belanja Kosong</a>
-                <?php
-            }
-            else
-                {
-                    $grand_total = 0;
-                    foreach ($cart as $item)
-                        {
-                            $grand_total+=$item['subtotal'];
-                ?>
-                <a class="list-group-item"><?php echo $item['name']; ?> (<?php echo $item['qty']; ?> x <?php echo number_format($item['price'],0,",","."); ?>)=<?php echo number_format($item['subtotal'],0,",","."); ?></a>
-                <?php
-                        }
-                ?>
- 
-                <?php
-                }
- ?>
-            </div>
-        </div>
-        <!-- /.col-lg-3 -->
- 
-        <div class="col-lg-9 mt-5">
-<!-- END Bagian Keranjang static -->
+				<div class="list-group">
+					<a class="list-group-item"><strong>KATEGORI</strong></a>
+					<a href="<?= base_url() ?>home/index/" class="list-group-item">Semua</a>
+					<?php
+					foreach ($kategori as $row) {
+						?>
+						<a href="<?php echo base_url() ?>home/index/<?php echo $row['id']; ?>" class="list-group-item"><?php echo $row['nama_kategori']; ?></a>
+					<?php
+					}
+					?>
+				</div><br>
 
 
+				<div class="list-group">
+					<a href="<?php echo base_url() ?>shopping/tampil_cart" class="list-group-item"><strong><i class="glyphicon glyphicon-shopping-cart"></i> KERANJANG BELANJA</strong></a>
+					<?php
+
+					$cart = $this->cart->contents();
+
+					// If cart is empty, this will show below message.
+					if (empty($cart)) {
+						?>
+						<a class="list-group-item">Keranjang Belanja Kosong</a>
+						<?php
+						} else {
+							$grand_total = 0;
+							foreach ($cart as $item) {
+								$grand_total += $item['subtotal'];
+								?>
+							<a class="list-group-item"><?php echo $item['name']; ?> (<?php echo $item['qty']; ?> x <?php echo number_format($item['price'], 0, ",", "."); ?>)=<?php echo number_format($item['subtotal'], 0, ",", "."); ?></a>
+						<?php
+							}
+							?>
+
+					<?php
+					}
+					?>
+				</div>
+			</div>
+			<!-- /.col-lg-3 -->
+
+			<div class="col-lg-9 mt-5">
+				<!-- END Bagian Keranjang static -->

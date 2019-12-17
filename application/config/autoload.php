@@ -62,10 +62,15 @@ $autoload['packages'] = array();
 
 $autoload['libraries'] = array('database', 'session', 'fungsi');
 
+
 $autoload['libraries'] = array('email', 'database','form_validation','session', 'pagination');
 
+$autoload['libraries'] = array('database', 'form_validation', 'session', 'pagination');
 
-$autoload['libraries'] = array('database','form_validation','session', 'pagination');
+
+$autoload['libraries'] = array('database', 'form_validation', 'session', 'pagination');
+
+$autoload['libraries'] = array('database', 'email', 'session');
 
 
 
@@ -104,10 +109,12 @@ $autoload['drivers'] = array();
 
 $autoload['helper'] = array('url', 'fungsi');
 
-$autoload['helper'] = array('form','url','html');
+$autoload['helper'] = array('form', 'url', 'html');
 
 
 $autoload['helper'] = array('form', 'url', 'html', 'file', 'security');
+
+$autoload['helper'] = array('url', 'file', 'security');
 
 
 
