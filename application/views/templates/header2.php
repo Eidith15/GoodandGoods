@@ -18,7 +18,7 @@
   <div class="shadow">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     	<div class="container">
-	      <a class="navbar-brand" href="#">GOOD & GOODS</a>
+	      <a class="navbar-brand" href="<?= base_url() ?>home">GOOD & GOODS</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="navbar-toggler-icon"></span>
 	      </button>
@@ -50,12 +50,8 @@
       </div>
       	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 	        <div class="navbar-nav">
-			    <span class="border">
-	     		<a class="nav-item nav-link text-info mr-3 ml-3" href="#">Login</a>
-	     		</span>
-	     		<span class="border">
-	     		<a class="nav-item nav-link text-success mr-3 ml-3" href="#">Daftar</a>
-	     		</span>
+			    
+	     		
 		    </div>
 	    </nav>
     </nav>
