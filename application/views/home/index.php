@@ -1,3 +1,45 @@
+<div class="container ">
+ 
+  <div class="row mt-10">
+ 
+        <div class="col-lg-3">
+
+
+<div class="list-group">
+           <a href="<?php echo base_url()?>shopping/tampil_cart" class="list-group-item"><strong><i class="glyphicon glyphicon-shopping-cart"></i> KERANJANG BELANJA</strong></a>
+          <?php 
+ 
+            $cart= $this->cart->contents();
+ 
+// If cart is empty, this will show below message.
+            if(empty($cart)) {
+                ?>
+                <a class="list-group-item">Keranjang Belanja Kosong</a>
+                <?php
+            }
+            else
+                {
+                    $grand_total = 0;
+                    foreach ($cart as $item)
+                        {
+                            $grand_total+=$item['subtotal'];
+                ?>
+                <a class="list-group-item"><?php echo $item['name']; ?> (<?php echo $item['qty']; ?> x <?php echo number_format($item['price'],0,",","."); ?>)=<?php echo number_format($item['subtotal'],0,",","."); ?></a>
+                <?php
+                        }
+                ?>
+ 
+                <?php
+                }
+ ?>
+            </div>
+        </div>
+        <!-- /.col-lg-3 -->
+ 
+        <div class="col-lg-9 mt-5">
+ 
+
+
 <div class="container">
   <div class="row mt-5">
     <?php foreach($barang as $brg) : ?>
