@@ -51,7 +51,7 @@
       	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 	        <div class="navbar-nav">
 			    <span class="border">
-	     		<a class="nav-item nav-link text-info mr-3 ml-3" href="#">Login</a>
+	     		<a class="nav-item nav-link text-info mr-3 ml-3" href="<?= base_url('auth/login/'); ">Login</a>
 	     		</span>
 	     		<span class="border">
 	     		<a class="nav-item nav-link text-success mr-3 ml-3" href="#">Daftar</a>
