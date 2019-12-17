@@ -52,7 +52,7 @@ class AdminHome_model extends CI_model{
 		$this->db->where('id_barang', $this->input->post('id_barang'));
 		$this->db->update('barang', $data);
 	}
-
+  
 	public function cariDataBarang(){
 		$keyword = $this->input->post('keyword', true);
 		$this->db->like('nama_barang', $keyword);

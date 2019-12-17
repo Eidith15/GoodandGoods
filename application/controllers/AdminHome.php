@@ -24,7 +24,7 @@ class AdminHome extends CI_Controller {
 		$this->load->view('admin_home/index', $data);
 		$this->load->view('templates/footer');
 	}
-
+  
 	public function detail($id){
 		$data['judul'] = 'Detail Buku';
 		$kategori=($this->uri->segment(3))?$this->uri->segment(3):0;
