@@ -43,7 +43,7 @@
                     <div class="row">
                         <div class="col-md-2 col-lg-2 col-6">
                             <div class="logo">
-                                <a href="index.html">
+                                <a href="<?= base_url(); ?>">
                                     <img src="<?= base_url(); ?>assets/images/logo/logo.png" alt="logo">
                                 </a>
                             </div>
