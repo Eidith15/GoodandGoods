@@ -88,9 +88,6 @@
                                     </div>
                                 </form>
                             </div> 
-                            <div class="form-output">
-                                <p class="form-messege"></p>
-                            </div>
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-6 col-sm-12 smt-30 xmt-30">
