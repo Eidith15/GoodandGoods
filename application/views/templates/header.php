@@ -56,7 +56,7 @@
                                     </li>
                                     <li><a href="contact.html">Shop</a></li>
                                     <li><a href="<?= base_url(); ?>about">About</a></li>
-                                    <li><a href="contact.html">contact</a></li>
+                                    <li><a href="<?= base_url(); ?>contact">Contact</a></li>
                                 </ul>
                             </nav>
                             
