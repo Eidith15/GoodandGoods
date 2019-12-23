@@ -1,130 +1,89 @@
-<<<<<<< HEAD
-<div class="container ">
- 
-  <div class="row mt-10">
- 
-        <div class="col-lg-3">
-
-
-<div class="list-group">
-           <a href="<?php echo base_url()?>shopping/tampil_cart" class="list-group-item"><strong><i class="glyphicon glyphicon-shopping-cart"></i> KERANJANG BELANJA</strong></a>
-          <?php 
- 
-            $cart= $this->cart->contents();
- 
-// If cart is empty, this will show below message.
-            if(empty($cart)) {
-                ?>
-                <a class="list-group-item">Keranjang Belanja Kosong</a>
-                <?php
-            }
-            else
-                {
-                    $grand_total = 0;
-                    foreach ($cart as $item)
-                        {
-                            $grand_total+=$item['subtotal'];
-                ?>
-                <a class="list-group-item"><?php echo $item['name']; ?> (<?php echo $item['qty']; ?> x <?php echo number_format($item['price'],0,",","."); ?>)=<?php echo number_format($item['subtotal'],0,",","."); ?></a>
-                <?php
-                        }
-                ?>
- 
-                <?php
-                }
- ?>
+ <!-- Start Slider Area -->
+        <div class="slider__container slider--one">
+            <div class="slider__activation__wrap owl-carousel owl-theme">
+                <!-- Start Single Slide -->
+                <div class="slide slider__full--screen" style="background: rgba(0, 0, 0, 0) url(<?= base_url(); ?>assets/images/slider/bg/1.png) no-repeat scroll center center / cover ;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-4 col-sm-12 col-xs-12">
+                                <div class="slider__inner">
+                                    <h1>New Product <span class="text--theme">Collection</span></h1>
+                                    <div class="slider__btn">
+                                        <a class="htc__btn" href="cart.html">shop now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single Slide -->
+                <!-- Start Single Slide -->
+                <div class="slide slider__full--screen" style="background: rgba(0, 0, 0, 0) url(<?= base_url(); ?>assets/images/slider/bg/2.png) no-repeat scroll center center / cover ;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                                <div class="slider__inner">
+                                    <h1>New Product <span class="text--theme">Collection</span></h1>
+                                    <div class="slider__btn">
+                                        <a class="htc__btn" href="cart.html">shop now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single Slide -->
             </div>
         </div>
-        <!-- /.col-lg-3 -->
- 
-        <div class="col-lg-9 mt-5">
- 
+<!-- End Slider Area -->
 
-
-<div class="container">
-  <div class="row mt-5">
-=======
-
-
-<!-- end slider -->
-
- <div class="container">
-
-  <div class="bd-example sliderr">
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="<?= base_url() ?>/assets/img/2.JPG" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="<?= base_url() ?>/assets/img/3.JPG" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="<?= base_url() ?>/assets/img/4.JPG" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </div>
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
-
-
-
-  <div class="row ">
->>>>>>> 79e993cabac2b9c207d626da851b4ce8af81efcb
-    <?php foreach($barang as $brg) : ?>
-    <div class="col-md-3 mb-2 mt-3">
-      <a class="text-decoration-none text-body" href="<?= base_url(); ?>/home/detail/<?=$brg['id_barang'] ?>">
-        <div class="card hover-card h-100" >
-          <div>
-          <img src="<?= base_url();  ?>assets/img/<?= $brg['image_barang'] ?>" class="card-img-top" height="300">
-          </div>
-          <div class="card-header bg-transparent h-100">
-            <h5 class="card-title text-center mt-1"><?= $brg['nama_barang'] ?></h5>
-          </div>
-          <div class="card-body">
-            <p class="card-text line-clamp"><?= $brg['deskripsi_barang'] ?></p> 
-                
-          </div>
-          <div class="card-footer bg-transparent">
-            <h6 class="card-text">Harga : Rp. <?= number_format($brg['harga_barang'],0,",",".");?>,-</h6>
-          </div>
-          <form method="post" action="<?php echo base_url();?>shopping/tambah" method="post" accept-charset="utf-8">
-            <input type="hidden" name="id" value="<?= $brg['id_barang']; ?>" />
-            <input type="hidden" name="nama" value="<?= $brg['nama_barang']; ?>" />
-            <input type="hidden" name="harga" value="<?= $brg['harga_barang']; ?>" />
-            <input type="hidden" name="gambar" value="<?= $brg['image_barang']; ?>" />
-            <input type="hidden" name="qty" value="1" />
-            <button type="submit" class="btn btn-sm btn-success w-100"> Tambah ke Keranjang</button>
-            </form>
-        </div>
-      </a>
-    </div>
-    <?php endforeach; ?>
-  </div>
-</div> 
-
-
+<!-- Start Our Product Area -->
+        <section class="htc__product__area ptb--130 bg__white">
+            <div class="container">
+                <div class="htc__product__container">
+                    <!-- Start Product MEnu -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="product__menu">
+                                <button data-filter="*"  class="is-checked">All</button>
+                                <button data-filter=".cat--1">Novel</button>
+                                <button data-filter=".cat--2">Comic</button>
+                                <button data-filter=".cat--3">Education</button>
+                                <button data-filter=".cat--4">Hobby</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Product MEnu -->
+                    <div class="row product__list">
+                        <?php foreach($barang as $brg) : ?>
+                        <!-- Start Single Product -->
+                        <div class="col-md-3 single__pro col-lg-3 col-md-4 cat--1 col-sm-12">
+                            <div class="product foo">
+                                <div class="product__inner">
+                                    <div class="pro__thumb">
+                                        <a href="#">
+                                            <img src="<?= base_url(); ?>assets/img/<?= $brg['image_barang'] ?>" alt="product images" height="350">
+                                        </a>
+                                    </div>
+                                    <div class="product__hover__info">
+                                        <ul class="product__action">
+                                            <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
+                                            <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="product__details">
+                                    <h2><a href="product-details.html" class="line-clamp" ><?= $brg['nama_barang'] ?></a></h2>
+                                    <ul class="product__price">
+                                        <li class="new__price">Rp. <?= number_format($brg['harga_barang'],0,",",".");?></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Product -->
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Our Product Area -->
