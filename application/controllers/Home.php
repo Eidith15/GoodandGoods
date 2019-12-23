@@ -12,6 +12,7 @@ class Home extends CI_Controller {
 
 	public function index(){
 		$data['judul'] = 'Home';
+		$data['header'] = '';
 		$data['barang'] = $this->Home_model->getAllBarang();
 
 		$this->load->view('templates/header', $data);

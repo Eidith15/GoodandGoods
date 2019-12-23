@@ -2,15 +2,12 @@
         <div class="slider__container slider--one">
             <div class="slider__activation__wrap owl-carousel owl-theme">
                 <!-- Start Single Slide -->
-                <div class="slide slider__full--screen" style="background: rgba(0, 0, 0, 0) url(<?= base_url(); ?>assets/images/slider/bg/1.png) no-repeat scroll center center / cover ;">
+                <div class="slide slider__full--screen" style="background: rgba(0, 0, 0, 0) url(<?= base_url(); ?>assets/images/slider/bg/book4.jpeg) no-repeat scroll center center / cover ;">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-4 col-sm-12 col-xs-12">
                                 <div class="slider__inner">
-                                    <h1>New Product <span class="text--theme">Collection</span></h1>
-                                    <div class="slider__btn">
-                                        <a class="htc__btn" href="cart.html">shop now</a>
-                                    </div>
+                                    <h1>Welcome to <br><span class="text--theme">Good & Goods</span><br>Book Store</h1>
                                 </div>
                             </div>
                         </div>
@@ -18,15 +15,12 @@
                 </div>
                 <!-- End Single Slide -->
                 <!-- Start Single Slide -->
-                <div class="slide slider__full--screen" style="background: rgba(0, 0, 0, 0) url(<?= base_url(); ?>assets/images/slider/bg/2.png) no-repeat scroll center center / cover ;">
+                <div class="slide slider__full--screen" style="background: rgba(0, 0, 0, 0) url(<?= base_url(); ?>assets/images/slider/bg/book3.jpg) no-repeat scroll center center / cover ;">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
                                 <div class="slider__inner">
-                                    <h1>New Product <span class="text--theme">Collection</span></h1>
-                                    <div class="slider__btn">
-                                        <a class="htc__btn" href="cart.html">shop now</a>
-                                    </div>
+                                    <h1>Take a seat and enjoy our <span class="text--theme">Collection</span></h1>
                                 </div>
                             </div>
                         </div>
@@ -57,7 +51,7 @@
                     <div class="row product__list">
                         <?php foreach($barang as $brg) : ?>
                         <!-- Start Single Product -->
-                        <div class="col-md-3 single__pro col-lg-3 col-md-4 cat--1 col-sm-12">
+                        <div class="col-md-3 single__pro col-lg-3 col-md-4 col-sm-12 cat--<?= $brg['kategori'] ?>">
                             <div class="product foo">
                                 <div class="product__inner">
                                     <div class="pro__thumb">
@@ -67,7 +61,6 @@
                                     </div>
                                     <div class="product__hover__info">
                                         <ul class="product__action">
-                                            <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
                                             <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
                                         </ul>
                                     </div>

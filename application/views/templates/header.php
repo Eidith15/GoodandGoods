@@ -36,7 +36,7 @@
     <!-- Body main wrapper start -->
     <div class="wrapper fixed__footer">
         <!-- Start Header Style -->
-        <header id="header" class="htc-header">
+        <header id="header" class="htc-header <?= $header; ?>">
             <!-- Start Mainmenu Area -->
             <div id="sticky-header-with-topbar" class="mainmenu__area sticky__header">
                 <div class="container">
@@ -44,17 +44,18 @@
                         <div class="col-md-2 col-lg-2 col-6">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="<?= base_url(); ?>assets/images/logo/uniqlo.png" alt="logo">
+                                    <img src="<?= base_url(); ?>assets/images/logo/logo.png" alt="logo">
                                 </a>
                             </div>
                         </div>
                         <!-- Start MAinmenu Ares -->
                         <div class="col-md-8 col-lg-8 d-none d-md-block">
-                            <nav class="mainmenu__nav  d-none d-lg-block">
-                                <ul class="main__menu">
+                            <nav class="mainmenu__nav  d-none d-lg-block text-white">
+                                <ul class="main__menu ">
                                     <li class="drop"><a href="<?= base_url(); ?>">Home</a>
                                     </li>
-                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="contact.html">Shop</a></li>
+                                    <li><a href="<?= base_url(); ?>about">About</a></li>
                                     <li><a href="contact.html">contact</a></li>
                                 </ul>
                             </nav>
