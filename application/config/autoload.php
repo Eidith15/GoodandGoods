@@ -62,6 +62,9 @@ $autoload['packages'] = array();
 
 $autoload['libraries'] = array('database', 'session', 'fungsi');
 
+
+$autoload['libraries'] = array('email', 'database','form_validation','session', 'pagination');
+
 $autoload['libraries'] = array('database', 'form_validation', 'session', 'pagination');
 
 

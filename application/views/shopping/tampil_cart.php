@@ -1,4 +1,54 @@
 
+    <!-- Bagian Keranjang static -->
+  <div class="container mt-5">
+    <div class="row">
+
+      <div class="col-lg-3">
+
+        <div class="list-group">
+          <a class="list-group-item"><strong>KATEGORI</strong></a>
+          <a href="<?= base_url() ?>home/index/" class="list-group-item">Semua</a>
+          <?php
+          foreach ($kategori as $row) {
+            ?>
+            <a href="<?php echo base_url() ?>home/index/<?php echo $row['id']; ?>" class="list-group-item"><?php echo $row['nama_kategori']; ?></a>
+          <?php
+          }
+          ?>
+        </div><br>
+
+
+        <div class="list-group">
+          <a href="<?php echo base_url() ?>shopping/tampil_cart" class="list-group-item"><strong><i class="glyphicon glyphicon-shopping-cart"></i> KERANJANG BELANJA</strong></a>
+          <?php
+
+          $cart = $this->cart->contents();
+
+          // If cart is empty, this will show below message.
+          if (empty($cart)) {
+            ?>
+            <a class="list-group-item">Keranjang Belanja Kosong</a>
+            <?php
+            } else {
+              $grand_total = 0;
+              foreach ($cart as $item) {
+                $grand_total += $item['subtotal'];
+                ?>
+              <a class="list-group-item"><?php echo $item['name']; ?> (<?php echo $item['qty']; ?> x <?php echo number_format($item['price'], 0, ",", "."); ?>)=<?php echo number_format($item['subtotal'], 0, ",", "."); ?></a>
+            <?php
+              }
+              ?>
+
+          <?php
+          }
+          ?>
+        </div>
+      </div>
+      <!-- /.col-lg-3 -->
+
+      <div class="col-lg-9 mt-5">
+        <!-- END Bagian Keranjang static -->
+
 <div class="container">
   <h2>Daftar Belanja</h2>
 <form action="<?php echo base_url()?>shopping/ubah_cart" method="post" name="frmShopping" id="frmShopping" class="form-horizontal" enctype="multipart/form-data">
@@ -48,7 +98,7 @@ $grand_total = $grand_total + $item['subtotal'];
 
 <button class ="btn btn-danger"><a data-toggle="modal" data-target="#myModal"   rel="noopener noreferrer">Kosongkan Cart</a></button>
 <button class='btn btn-sm btn-success'  type="submit">Update Cart</button>
-<a href="<?php echo base_url()?>shopping/check_out"  class ='btn btn-sm btn-primary'>Check Out</a>
+<a href="<?=base_url()?>shopping/check_out"  class ='btn btn-sm btn-primary'>Check Out</a>
 </tr>
  
 </table>

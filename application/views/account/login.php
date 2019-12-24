@@ -41,7 +41,7 @@
                             <a href="#" class="small">Forgot Password?</a>
                         </div>
                         <div class="text-center">
-                            <a href="#" class="small">Create an Account!</a>
+                            <a href="<?= base_url('Register'); ?>" class="small">Create an Account!</a>
                         </div>
                     </div>
                 </div>

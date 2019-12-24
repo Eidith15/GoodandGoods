@@ -4,7 +4,7 @@ class Mkeranjang extends CI_Model {
  
     public function get_produk_all()
     {
-        $query = $this->db->get('produk');
+        $query = $this->db->get('barang');
         return $query->result_array();
     }
  
@@ -14,7 +14,7 @@ class Mkeranjang extends CI_Model {
             {
                 $this->db->where('kategori',$kategori);
             }
-        $query = $this->db->get('produk');
+        $query = $this->db->get('barang');
         return $query->result_array();
     }
  
@@ -24,14 +24,7 @@ class Mkeranjang extends CI_Model {
         return $query->result_array();
     }
  
-    public  function get_produk_id($id)
-    {
-        $this->db->select('produk.*,nama_kategori');
-        $this->db->from('produk');
-        $this->db->join('kategori', 'kategori=kategori.id','left');
-        $this->db->where('id_produk',$id);
-        return $this->db->get();
-    }   
+    
  
     public function tambah_pelanggan($data)
     {
