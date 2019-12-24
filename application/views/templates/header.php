@@ -54,7 +54,7 @@
                                 <ul class="main__menu ">
                                     <li class="drop"><a href="<?= base_url(); ?>">Home</a>
                                     </li>
-                                    <li><a href="contact.html">Shop</a></li>
+                                    <li><a href="<?= base_url(); ?>shop">Shop</a></li>
                                     <li><a href="<?= base_url(); ?>about">About</a></li>
                                     <li><a href="<?= base_url(); ?>contact">Contact</a></li>
                                 </ul>
@@ -64,8 +64,9 @@
                                 <nav id="mobile_dropdown">
                                     <ul>
                                         <li><a href="<?= base_url(); ?>">Home</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="contact.html">contact</a></li>
+                                        <li><a href="<?= base_url(); ?>shop">Shop</a></li>
+                                        <li><a href="<?= base_url(); ?>about">About</a></li>
+                                        <li><a href="<?= base_url(); ?>contact">Contact</a></li>
                                     </ul>
                                 </nav>
                             </div>  
