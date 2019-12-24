@@ -86,7 +86,7 @@ class Login extends CI_Controller {
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
         You have been logout
       </div');
-        redirect('shop');
+        redirect('home');
     }
 
 
