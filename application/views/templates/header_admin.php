@@ -10,6 +10,9 @@
   <meta name="author" content="">
 
   <title><?= $title; ?></title>
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="shortcut icon" type="image/x-icon" href="<?= base_url(); ?>assets/images/favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
   <!-- Custom fonts for this template-->
   <link href="<?=base_url('assets/');?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
