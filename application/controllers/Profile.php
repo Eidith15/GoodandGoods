@@ -14,9 +14,9 @@ class profile extends CI_Controller {
 		$data['judul'] = 'Profile';
 		$data['user'] = $this->Profile_model->getAllUser();
 
-		$this->load->view('templates/header2', $data);
-		$this->load->view('Profile/index', $data);
-		$this->load->view('templates/footer2');
+		$this->load->view('templates/header', $data);
+		$this->load->view('profile/index', $data);
+		$this->load->view('templates/footer');
 		
 	}
 
@@ -26,8 +26,8 @@ class profile extends CI_Controller {
 		
 
 		$this->load->view('templates/header2', $data);
-		$this->load->view('Profile/ubah_profile', $data);
-		$this->load->view('templates/footer2');
+		$this->load->view('profile/ubah_profile', $data);
+		$this->load->view('templates/footer');
 		
 	}
 
