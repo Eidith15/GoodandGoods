@@ -17,9 +17,11 @@ class Login extends CI_Controller {
         if ($this->form_validation->run() == false) {
           
         $data['title'] = ' Login page';
-        $this->load->view('templates/account_header', $data);
+        
+            $this->load->view('templates/account_header', $data);
             $this->load->view('account/login');
             $this->load->view('templates/account_footer');
+
     } else {
           //validasi lolos
           $this->_login();  
@@ -49,35 +51,45 @@ class Login extends CI_Controller {
                     if ($user['role_id'] ==1) {
                         redirect('admin');
                     }  else {
-                    redirect('user');
+                    redirect('shop');
                 }
 
                 } else {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
                     Wrong Password
                   </div');
-                    redirect('auth');
+                    redirect('login');
                 } 
                     
             }else{ 
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
                 This email has not been activeted!
               </div');
-                redirect('auth');
+                redirect('login');
             }
 
         } else {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
             Email not Registered!
             </div');
-            redirect('auth');    
+            redirect('login');    
         
         }
 
 
 
     }
-
+    public function logout() 
+    {
+        $this->session->unset_userdata('email');
+        $this->session->unset_userdata('role_data');
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+        You have been logout
+      </div');
+        redirect('shop');
+    }
 
 
 }
+
+
