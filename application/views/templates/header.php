@@ -1,16 +1,17 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title><?= $judul; ?></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url(); ?>assets/images/favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    
+
     <!-- Bootstrap Fremwork Main Css -->
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap.min.css">
     <!-- All Plugins css -->
@@ -31,7 +32,7 @@
 <body>
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->  
+    <![endif]-->
 
     <!-- Body main wrapper start -->
     <div class="wrapper fixed__footer">
@@ -59,7 +60,7 @@
                                     <li><a href="<?= base_url(); ?>contact">Contact</a></li>
                                 </ul>
                             </nav>
-                            
+
                             <div class="mobile-menu clearfix d-block d-lg-none">
                                 <nav id="mobile_dropdown">
                                     <ul>
@@ -68,13 +69,13 @@
                                         <li><a href="contact.html">contact</a></li>
                                     </ul>
                                 </nav>
-                            </div>  
+                            </div>
                         </div>
                         <!-- End MAinmenu Ares -->
-                        <div class="col-md-2 col-lg-2 col-6">  
+                        <div class="col-md-2 col-lg-2 col-6">
                             <ul class="menu-extra">
                                 <li class="search search__open d-none d-sm-block"><span class="ti-search"></span></li>
-                                <li><a href="login-register.html"><span class="ti-user"></span></a></li>
+                                <li><a href="<?= base_url('login'); ?>"><span class="ti-user"></span></a></li>
                                 <li class="cart__menu"><span class="ti-shopping-cart"></span></li>
                             </ul>
                         </div>
@@ -85,15 +86,15 @@
             <!-- End Mainmenu Area -->
         </header>
         <!-- End Header Style -->
-        
+
         <div class="body__overlay"></div>
         <!-- Start Offset Wrapper -->
         <div class="offset__wrapper">
             <!-- Start Search Popap -->
             <div class="search__area">
-                <div class="container" >
-                    <div class="row" >
-                        <div class="col-md-12" >
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
                             <div class="search__inner">
                                 <form action="#" method="get">
                                     <input placeholder="Search here... " type="text">
@@ -108,7 +109,7 @@
                 </div>
             </div>
             <!-- End Search Popap -->
-            
+
             <!-- Start Cart Panel -->
             <div class="shopping__cart">
                 <div class="shopping__cart__inner">
@@ -145,4 +146,3 @@
             <!-- End Cart Panel -->
         </div>
         <!-- End Offset Wrapper -->
-       

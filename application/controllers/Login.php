@@ -18,9 +18,9 @@ class Login extends CI_Controller
         // validasi
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Login';
-            $this->load->view('templates/header3', $data);
+            $this->load->view('templates/account_header', $data);
             $this->load->view('account/login');
-            $this->load->view('templates/footer');
+            $this->load->view('templates/account_footer');
         } else {
             // validasinya success
             $this->_login();
@@ -36,18 +36,30 @@ class Login extends CI_Controller
 
         // Jika usernya ada
         if ($user) {
-            // cek password
-            if (password_verify($password, $user['password'])) {
-                $data = [
-                    'email' => $user['email']
-                ];
-                $this->session->set_userdata($data);
-                redirect('home');
+            // Jika Usernya Aktif
+            if ($user['is_active'] == 1) {
+                // Cek password
+                if (password_verify($password, $user['password'])) {
+                    $data = [
+                        'email' => $user['email'],
+                        'role_id' => $user['role_id']
+                    ];
+                    $this->session->set_userdata($data);
+                    redirect('user');
+                } else {
+                    $this->session->set_flashdata(
+                        'message',
+                        '<div class="alert alert-danger" role="alert">
+                        Wrong password!
+                        </div>'
+                    );
+                    redirect('login');
+                }
             } else {
                 $this->session->set_flashdata(
                     'message',
                     '<div class="alert alert-danger" role="alert">
-                    Wrong password!
+                    This Email has not been activated!
                     </div>'
                 );
                 redirect('login');
