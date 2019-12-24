@@ -42,7 +42,7 @@ class Login extends CI_Controller
                     'email' => $user['email']
                 ];
                 $this->session->set_userdata($data);
-                redirect('login');
+                redirect('home');
             } else {
                 $this->session->set_flashdata(
                     'message',
