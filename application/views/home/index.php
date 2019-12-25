@@ -49,7 +49,11 @@
                     </div>
                     <!-- End Product MEnu -->
                     <div class="row product__list">
-                        <?php foreach($barang as $brg) : ?>
+                        <?php 
+                        $i = 0;
+                        $i++;
+                        foreach($barang as $brg) :
+                        ?>
                         <!-- Start Single Product -->
                         <div class="col-md-3 single__pro col-lg-3 col-md-4 col-sm-12 cat--<?= $brg['kategori'] ?>">
                             <div class="product foo">
@@ -74,7 +78,13 @@
                             </div>
                         </div>
                         <!-- End Single Product -->
-                        <?php endforeach; ?>
+                        <?php 
+                        if ($i++ == 8) {
+                            break;
+                        }
+                        endforeach; 
+
+                        ?>
                     </div>
                 </div>
             </div>

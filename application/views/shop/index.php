@@ -28,13 +28,10 @@
                             <div class="filter__menu__container">
                                 <div class="product__menu">
                                     <button data-filter="*"  class="is-checked">All</button>
-                                    <button data-filter=".cat--1">Furnitures</button>
-                                    <button data-filter=".cat--2">Bags</button>
-                                    <button data-filter=".cat--3">Decoration</button>
-                                    <button data-filter=".cat--4">Accessories</button>
-                                </div>
-                                <div class="filter__box">
-                                    <a class="filter__menu" href="#">filter</a>
+                                    <button data-filter=".cat--1">Novel</button>
+                                    <button data-filter=".cat--2">Comic</button>
+                                    <button data-filter=".cat--3">Education</button>
+                                    <button data-filter=".cat--4">Hobby</button>
                                 </div>
                             </div>
                         </div>
@@ -71,9 +68,7 @@
                     <!-- Start Load More BTn -->
                     <div class="row mt--60">
                         <div class="col-md-12">
-                            <div class="htc__loadmore__btn">
-                                <a href="#">load more</a>
-                            </div>
+                            <?=  $this->pagination->create_links(); ?>
                         </div>
                     </div>
                     <!-- End Load More BTn -->
