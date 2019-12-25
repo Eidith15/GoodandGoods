@@ -28,7 +28,11 @@ class Register extends CI_Controller
 
 	public function register()
 	{
+<<<<<<< HEAD
 		$this->form_validation->set_rules('name', 'Name', 'required|trim');
+=======
+		$this->form_validation->set_rules('name', 'Full Name', 'required|trim');
+>>>>>>> 5bad549e90912a7462f8df6118c5c5f7980adb21
 		// $this->form_validation->set_rules('lastname', 'Last Name', 'required|trim');
 		$this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[user.email]', ['is_unique' => 'This email has a already registered!']);
 		$this->form_validation->set_rules('password', 'Password', 'required|trim|min_length[3]|matches[confirmpassword]', [

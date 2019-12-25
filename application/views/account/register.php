@@ -11,7 +11,11 @@
                             </div>
                             <form action="<?= base_url('Register/register/'); ?>" method="post" class="user">
                                 <div class="form-group">
+<<<<<<< HEAD
                                     <input type="text" class="form-control form-control-user" id="name" name="name" placeholder="Fullname" value="<?= set_value('fullname'); ?>">
+=======
+                                    <input type="text" class="form-control form-control-user" id="name" name="name" placeholder="Full Name" value="<?= set_value('name'); ?>">
+>>>>>>> 5bad549e90912a7462f8df6118c5c5f7980adb21
                                     <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
                                 <div class="form-group">
@@ -40,6 +44,7 @@
                                 <a class="small" href="<?= base_url('login') ?>">Already have an account? Login!</a>
                             </div>
                         </div>
+                        <hr>
                         <div class="panel-footer text-center">
                             <h5>
                                 <a href="<?= base_url('home') ?>">GOODSISGOOD</a>
