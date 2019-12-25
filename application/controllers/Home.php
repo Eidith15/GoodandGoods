@@ -1,14 +1,17 @@
-<?php 
+<?php
 
-class Home extends CI_Controller {
+class Home extends CI_Controller
+{
 
-	public function __construct(){
+	public function __construct()
+	{
 		parent::__construct();
 		$this->load->model('Home_model');
 	}
 
 
-	public function index(){
+	public function index()
+	{
 		$data['judul'] = 'Home';
 		$data['header'] = '';
 		$data['barang'] = $this->Home_model->getAllBarang();
@@ -18,9 +21,10 @@ class Home extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
-	public function detail($id){
+	public function detail($id)
+	{
 		$data['judul'] = 'Detail Buku';
-		$kategori=($this->uri->segment(3))?$this->uri->segment(3):0;
+		$kategori = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 		$data['barang'] = $this->Home_model->get_produk_kategori($kategori);
 		$data['kategori'] = $this->Home_model->get_kategori_all();
 		$data['barang'] = $this->Home_model->getBarangById($id);
@@ -28,7 +32,4 @@ class Home extends CI_Controller {
 		$this->load->view('home/detail', $data);
 		$this->load->view('templates/footer');
 	}
-
 }
-
- ?>
