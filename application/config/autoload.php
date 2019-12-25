@@ -107,7 +107,7 @@ $autoload['drivers'] = array();
 |	$autoload['helper'] = array('url', 'file');
 */
 
-
+$autoload['libraries'] = array('database','email','session','form_validation');
 $autoload['helper'] = array('url', 'fungsi');
 
 $autoload['helper'] = array('form', 'url', 'html');
