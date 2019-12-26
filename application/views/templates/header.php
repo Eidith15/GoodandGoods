@@ -58,6 +58,7 @@
                                     <li><a href="<?= base_url(); ?>shop">Shop</a></li>
                                     <li><a href="<?= base_url(); ?>about">About</a></li>
                                     <li><a href="<?= base_url(); ?>contact">Contact</a></li>
+                                    <li><a href="<?= base_url(); ?>shopping/tampil_cart">Cart</a></li>
                                 </ul>
                             </nav>
 
@@ -112,38 +113,124 @@
             <!-- End Search Popap -->
 
             <!-- Start Cart Panel -->
-            <div class="shopping__cart">
+
+            <div class="shopping__cart" >
+                                    
+                                    <?php
+$cart = $this->cart->contents();
+        
+ ?>
+                         <?php
+$grand_total = 0;
+$i = 1;
+ 
+foreach ($cart as $item):
+$grand_total = $grand_total + $item['subtotal'];
+?>
+
                 <div class="shopping__cart__inner">
+
                     <div class="offsetmenu__close__btn">
                         <a href="#"><i class="zmdi zmdi-close"></i></a>
                     </div>
+
+
                     <div class="shp__cart__wrap">
+
+                        
                         <div class="shp__single__product">
+                                
                             <div class="shp__pro__thumb">
                                 <a href="#">
-                                    <img src="<?= base_url(); ?>assets/images/product/sm-img/1.jpg" alt="product images">
+                                    <img src="<?= base_url(); ?>/<?= $item['gambar']; ?>" alt="product images">
                                 </a>
                             </div>
+                            <?php foreach ( $this->cart->contents() as $item) : ?>
                             <div class="shp__pro__details">
-                                <h2><a href="product-details.html">BO&Play Wireless Speaker</a></h2>
-                                <span class="quantity">QTY: 1</span>
-                                <span class="shp__price">$105.00</span>
+                                <h2><a href="product-details.html"><?= $item['name']; ?></a></h2>
+                                <span class="quantity"><?= $item['qty']; ?></span>
+                                <span class="shp__price"><?= number_format($item['price'],0,",","."); ?></span>
                             </div>
+                            <?php endforeach; ?>
                             <div class="remove__btn">
-                                <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
+                                <a href="#" title="Remove this item"><i class="zmdi zmdi-close">lele</i></a>
                             </div>
+                            
+                  
                         </div>
+                    
                     </div>
+                        
                     <ul class="shoping__total">
                         <li class="subtotal">Subtotal:</li>
                         <li class="total__price">$130.00</li>
                     </ul>
                     <ul class="shopping__btn">
-                        <li><a href="cart.html">View Cart</a></li>
+                        <li><a href="<?= base_url() ?>shopping/tampil_cart">View Cart</a></li>
                         <li class="shp__checkout"><a href="checkout.html">Checkout</a></li>
                     </ul>
+                
                 </div>
+            <?php endforeach; ?> 
             </div>
             <!-- End Cart Panel -->
         </div>
         <!-- End Offset Wrapper -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+
+
+                         <div class="container">
+<?php
+    foreach ($barang as $brg) :
+?>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="kotak">
+              <form method="post" action="<?php echo base_url();?>shopping/tambah" method="post" accept-charset="utf-8">
+                <a href="#"><img class="img-thumbnail" src="<?php echo base_url() . 'assets/download.jpg' ?>"/></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#"><?php echo $brg['nama_barang'];?></a>
+                  </h4>
+                  <h5>Rp. <?php echo number_format($brg['harga_barang'],0,",",".");?></h5>
+                  
+                </div>
+                <div class="card-footer">
+                  <a href="<?php echo base_url();?>shopping/detail_barang/<?php echo $brg['id_barang'];?>" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-search"></i> Detail</a> 
+ 
+ 
+                  <input type="hidden" name="id" value="<?php echo $brg['id_barang']; ?>" />
+                  <input type="hidden" name="nama" value="<?php echo $brg['nama_barang']; ?>" />
+                  <input type="hidden" name="harga" value="<?php echo $brg['harga_barang']; ?>" />
+                  <input type="hidden" name="gambar" value="<?php echo $brg['image_barang']; ?>" />
+                  <input type="hidden" name="qty" value="1" />
+                  <button type="submit" class="btn btn-sm btn-success"><i class="glyphicon glyphicon-shopping-cart"></i> Beli</button>
+                </div>
+                </form>
+              </div>
+            </div>
+<?php
+    endforeach;
+?>
+</div> -->
