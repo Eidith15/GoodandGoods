@@ -137,28 +137,28 @@ $grand_total = $grand_total + $item['subtotal'];
 
                     <div class="shp__cart__wrap">
 
-                        
+                        <?php foreach ( $this->cart->contents() as $item) : ?>
                         <div class="shp__single__product">
                                 
                             <div class="shp__pro__thumb">
                                 <a href="#">
-                                    <img src="<?= base_url(); ?>/<?= $item['gambar']; ?>" alt="product images">
+                                    <img src="<?= base_url() . 'assets/img/'.$item['gambar']; ?>" alt="product images">
                                 </a>
                             </div>
-                            <?php foreach ( $this->cart->contents() as $item) : ?>
+                            
                             <div class="shp__pro__details">
                                 <h2><a href="product-details.html"><?= $item['name']; ?></a></h2>
                                 <span class="quantity"><?= $item['qty']; ?></span>
                                 <span class="shp__price"><?= number_format($item['price'],0,",","."); ?></span>
                             </div>
-                            <?php endforeach; ?>
+                            
                             <div class="remove__btn">
                                 <a href="#" title="Remove this item"><i class="zmdi zmdi-close">lele</i></a>
                             </div>
                             
                   
                         </div>
-                    
+                    <?php endforeach; ?>
                     </div>
                         
                     <ul class="shoping__total">
@@ -195,42 +195,9 @@ $grand_total = $grand_total + $item['subtotal'];
 
 
 
-<!-- 
 
 
 
 
 
-                         <div class="container">
-<?php
-    foreach ($barang as $brg) :
-?>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="kotak">
-              <form method="post" action="<?php echo base_url();?>shopping/tambah" method="post" accept-charset="utf-8">
-                <a href="#"><img class="img-thumbnail" src="<?php echo base_url() . 'assets/download.jpg' ?>"/></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#"><?php echo $brg['nama_barang'];?></a>
-                  </h4>
-                  <h5>Rp. <?php echo number_format($brg['harga_barang'],0,",",".");?></h5>
-                  
-                </div>
-                <div class="card-footer">
-                  <a href="<?php echo base_url();?>shopping/detail_barang/<?php echo $brg['id_barang'];?>" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-search"></i> Detail</a> 
- 
- 
-                  <input type="hidden" name="id" value="<?php echo $brg['id_barang']; ?>" />
-                  <input type="hidden" name="nama" value="<?php echo $brg['nama_barang']; ?>" />
-                  <input type="hidden" name="harga" value="<?php echo $brg['harga_barang']; ?>" />
-                  <input type="hidden" name="gambar" value="<?php echo $brg['image_barang']; ?>" />
-                  <input type="hidden" name="qty" value="1" />
-                  <button type="submit" class="btn btn-sm btn-success"><i class="glyphicon glyphicon-shopping-cart"></i> Beli</button>
-                </div>
-                </form>
-              </div>
-            </div>
-<?php
-    endforeach;
-?>
-</div> -->
+
