@@ -26,13 +26,13 @@ class Register extends CI_Controller
 		$this->load->library('form_validation');
 	}
 
-	public function index()
-	{
-        $data['title'] = 'Register';
-        $this->load->view('templates/account_header', $data);
-        $this->load->view('account/register', $data);
-        $this->load->view('templates/account_footer');
-	}
+	// public function index()
+	// {
+    //     $data['title'] = 'Register';
+    //     $this->load->view('templates/account_header', $data);
+    //     $this->load->view('account/register', $data);
+    //     $this->load->view('templates/account_footer');
+	// }
 
 	public function register()
 	{
