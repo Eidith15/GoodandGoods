@@ -26,9 +26,25 @@ class Register extends CI_Controller
 		$this->load->library('form_validation');
 	}
 
+
+	// public function index()
+	// {
+    //     $data['title'] = 'Register';
+    //     $this->load->view('templates/account_header', $data);
+    //     $this->load->view('account/register', $data);
+    //     $this->load->view('templates/account_footer');
+	// }
+
+
 	public function register()
 	{
+<<<<<<< HEAD
 		$this->form_validation->set_rules('fullname', 'Fullname', 'required|trim');
+=======
+
+		$this->form_validation->set_rules('fullname', 'Full Name', 'required|trim');
+		// $this->form_validation->set_rules('lastname', 'Last Name', 'required|trim');
+>>>>>>> 89455490073d3f3309dec5480a862c2a48bb0e0a
 		$this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[user.email]', ['is_unique' => 'This email has a already registered!']);
 		$this->form_validation->set_rules('password', 'Password', 'required|trim|min_length[3]|matches[confirmpassword]', [
 			'matches' => 'Password dont match!',

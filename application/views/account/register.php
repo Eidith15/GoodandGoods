@@ -11,7 +11,11 @@
                             </div>
                             <form action="<?= base_url('Register/register/'); ?>" method="post" class="user">
                                 <div class="form-group">
+<<<<<<< HEAD
                                     <input type="text" class="form-control form-control-user" id="fullname" name="fullname" placeholder="Fullname" value="<?= set_value('fullname'); ?>">
+=======
+                                    <input type="text" class="form-control form-control-user" id="fullname" name="fullname" placeholder="Full Name" value="<?= set_value('fullname'); ?>">
+>>>>>>> 89455490073d3f3309dec5480a862c2a48bb0e0a
                                     <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
                                 <div class="form-group">
