@@ -1,86 +1,85 @@
-
 <div class="controller">
   <div class="row my-3">
     <div class="col-3">
       <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-        
+
         <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-        
+
         <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Ubah Password</a>
       </div>
     </div>
     <div class="col-5">
       <div class="tab-content" id="v-pills-tabContent">
-       
+
         <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-        
+
           <div class="row">
 
-              <div class="col">
+            <div class="col">
 
-                    <div class="card" style="width: 30rem;">
-                          <div class="card-header">
-                            Ubah Profile
-                          </div>
-                          <?php foreach( $user as $mhs) : ?>
-                          <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><?= $mhs['firstname'], $mhs['lastname'] ?></li>
-                            
-                            <li class="list-group-item"><?= $mhs['email'] ?></li>
-                            
+              <div class="card" style="width: 30rem;">
+                <div class="card-header">
+                  Ubah Profile
+                </div>
+                <?php foreach ($user as $mhs) : ?>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><?= $mhs['name'] ?></li>
 
-                          </ul>
+                    <li class="list-group-item"><?= $mhs['email'] ?></li>
 
-                          
-                          
-                          <a href="<?= base_url(); ?>profile/ubah_profile/<?= $mhs['id'];?>" class="badge badge-success float-right ">Ubah</a>
-                          <?php endforeach; ?>
-              
-                      </div>
 
-               </div>
+                  </ul>
+
+
+
+                  <a href="<?= base_url(); ?>profile/ubah_profile/<?= $mhs['id']; ?>" class="badge badge-success float-right ">Ubah</a>
+                <?php endforeach; ?>
+
+              </div>
+
             </div>
-        
-        
-        
-           </div>
+          </div>
+
+
+
+        </div>
 
         <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
 
-        <div class="row">
-        <div class="col">
-                <div class="card" style="width: 30rem;">
-                        <div class="card-header">
-                          Ubah Password
-                        </div> 
-                  <form>
-                      <div class="form-row my-3 mx-2">
-                      
-                        <div class="form-group col-md-6">
-                          <label for="inputPassword4"> Password Lama</label>
-                          <input type="password" class="form-control" id="inputPassword4">
-                        </div>
-                      </div>
-
-                      <div class="form-row my-3 mx-2">
-                      
-                        <div class="form-group col-md-6">
-                          <label for="inputPassword4">Password Baru</label>
-                          <input type="password" class="form-control" id="inputPassword4">
-                        </div>
-                      </div>
-                      
-                    <div class="row  my-3 mx-2">
-                    <button type="submit" name="ubah_password" class="btn btn-primary float-right">Ubah Password</button>
-                      </div>
-
-                    </form>
-                    </div> 
+          <div class="row">
+            <div class="col">
+              <div class="card" style="width: 30rem;">
+                <div class="card-header">
+                  Ubah Password
                 </div>
-              </div>
-              </div>               
+                <form>
+                  <div class="form-row my-3 mx-2">
 
-        
+                    <div class="form-group col-md-6">
+                      <label for="inputPassword4"> Password Lama</label>
+                      <input type="password" class="form-control" id="inputPassword4">
+                    </div>
+                  </div>
+
+                  <div class="form-row my-3 mx-2">
+
+                    <div class="form-group col-md-6">
+                      <label for="inputPassword4">Password Baru</label>
+                      <input type="password" class="form-control" id="inputPassword4">
+                    </div>
+                  </div>
+
+                  <div class="row  my-3 mx-2">
+                    <button type="submit" name="ubah_password" class="btn btn-primary float-right">Ubah Password</button>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
       </div>
     </div>
   </div>
@@ -140,7 +139,7 @@
           <div class="col-sm-6">
             <div class="card">
               <div class="card-body">
-                <?php foreach( $user as $mhs) : ?>
+                <?php foreach ($user as $mhs) : ?>
                 <p class="card-text"> <?= $mhs['firstname'] ?> </p>
                 <p class="card-text"> <?= $mhs['lastname'] ?> </p>
                 <p class="card-text"> <?= $mhs['email'] ?></p>

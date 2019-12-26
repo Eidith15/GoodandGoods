@@ -3,29 +3,31 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Login extends CI_Controller
 {
+
     public function __construct()
     {
         parent::__construct();
         $this->load->library('form_validation');
     }
 
-
     public function index()
     {
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
 
-        // validasi
         if ($this->form_validation->run() == false) {
-            $data['title'] = 'Login';
+
+            $data['title'] = ' Login page';
+
             $this->load->view('templates/account_header', $data);
             $this->load->view('account/login');
             $this->load->view('templates/account_footer');
         } else {
-            // validasinya success
+            //validasi lolos
             $this->_login();
         }
     }
+
 
     private function _login()
     {
@@ -34,58 +36,47 @@ class Login extends CI_Controller
 
         $user = $this->db->get_where('user', ['email' => $email])->row_array();
 
-        // Jika usernya ada
         if ($user) {
-            // Jika Usernya Aktif
             if ($user['is_active'] == 1) {
-                // Cek password
+                //cek password
+
                 if (password_verify($password, $user['password'])) {
                     $data = [
                         'email' => $user['email'],
                         'role_id' => $user['role_id']
                     ];
                     $this->session->set_userdata($data);
-                    redirect('user');
+                    if ($user['role_id'] == 1) {
+                        redirect('menu');
+                    } else {
+                        redirect('user');
+                    }
                 } else {
-                    $this->session->set_flashdata(
-                        'message',
-                        '<div class="alert alert-danger" role="alert">
-                        Wrong password!
-                        </div>'
-                    );
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
+                    Wrong Password
+                  </div');
                     redirect('login');
                 }
             } else {
-                $this->session->set_flashdata(
-                    'message',
-                    '<div class="alert alert-danger" role="alert">
-                    This Email has not been activated!
-                    </div>'
-                );
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
+                This email has not been activeted!
+              </div');
                 redirect('login');
             }
         } else {
-            $this->session->set_flashdata(
-                'message',
-                '<div class="alert alert-danger" role="alert">
-                Email is not registered!
-                </div>'
-            );
+            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
+            Email not Registered!
+            </div');
             redirect('login');
         }
     }
-
     public function logout()
     {
         $this->session->unset_userdata('email');
-        $this->session->unset_userdata('role_id');
-
-        $this->session->set_flashdata(
-            'message',
-            '<div class="alert alert-success" role="alert">
-            You have been logged out!
-            </div>'
-        );
+        $this->session->unset_userdata('role_data');
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+        You have been logout
+      </div');
         redirect('login');
     }
 }
