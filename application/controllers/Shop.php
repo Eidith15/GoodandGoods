@@ -1,7 +1,8 @@
-<?php 
-class Shop extends CI_Controller {
-
+<?php
+class Shop extends CI_Controller
+{
 	public function index(){
+
 		$data['judul'] = 'Product';
 		$data['header'] = 'header--3 bg__white';
 
@@ -26,5 +27,3 @@ class Shop extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 }
-
- ?>
