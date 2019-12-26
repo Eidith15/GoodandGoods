@@ -11,10 +11,15 @@
                             </div>
                             <form action="<?= base_url('Register/register/'); ?>" method="post" class="user">
                                 <div class="form-group">
+<<<<<<< HEAD
 
                                     <input type="text" class="form-control form-control-user" id="name" name="name" placeholder="Fullname" value="<?= set_value('fullname'); ?>">
 
                                   <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
+=======
+                                    <input type="text" class="form-control form-control-user" id="fullname" name="fullname" placeholder="Full Name" value="<?= set_value('fullname'); ?>">
+                                    <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
+>>>>>>> 89455490073d3f3309dec5480a862c2a48bb0e0a
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Email Address" value="<?= set_value('email'); ?>">
