@@ -68,7 +68,9 @@
                     <!-- Start Load More BTn -->
                     <div class="row mt--60">
                         <div class="col-md-12">
-                            <?=  $this->pagination->create_links(); ?>
+                            <div class="htc__loadmore__btn">
+                                <a href="">load more</a>
+                            </div>
                         </div>
                     </div>
                     <!-- End Load More BTn -->

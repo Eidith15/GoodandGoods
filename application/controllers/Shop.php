@@ -21,7 +21,6 @@ class Shop extends CI_Controller {
 		$data['start'] = $this->uri->segment(2);
 		$data['barang'] = $this->shop->getBarang($config['per_page'], $data['start']);
 
-
 		$this->load->view('templates/header', $data);
 		$this->load->view('shop/index', $data);
 		$this->load->view('templates/footer');

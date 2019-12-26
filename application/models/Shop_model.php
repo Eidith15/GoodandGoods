@@ -14,6 +14,8 @@ class Shop_model extends CI_model{
 		return $this->db->get('barang')->num_rows();
 	}
 
+	
+
 }
 
  ?>
