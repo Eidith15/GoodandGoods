@@ -2,7 +2,6 @@
 class Shop extends CI_Controller
 {
 
-<<<<<<< HEAD
 	public function __construct()
 	{
 		parent::__construct();
@@ -11,9 +10,6 @@ class Shop extends CI_Controller
 
 	public function index()
 	{
-=======
-	public function index(){
->>>>>>> 5bad549e90912a7462f8df6118c5c5f7980adb21
 		$data['judul'] = 'Product';
 		$data['header'] = 'header--3 bg__white';
 
