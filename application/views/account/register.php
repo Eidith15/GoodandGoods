@@ -12,10 +12,10 @@
                             <form action="<?= base_url('Register/register/'); ?>" method="post" class="user">
                                 <div class="form-group">
 
-
                                     <input type="text" class="form-control form-control-user" id="fullname" name="fullname" placeholder="Full Name" value="<?= set_value('fullname'); ?>">
 
                                     <?= form_error('fullname', '<small class="text-danger pl-3">', '</small>'); ?>
+
 
                                 </div>
                                 <div class="form-group">

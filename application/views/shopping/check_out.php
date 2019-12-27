@@ -1,5 +1,7 @@
+<section class="htc__product__area ptb--130 bg__white">
+            <div class="container">
 <h2>Konfirmasi Check Out</h2>
-<div class="kotak2">
+<div class="container">
 <?php
 $grand_total = 0;
 if ($cart = $this->cart->contents())
@@ -51,3 +53,5 @@ if ($cart = $this->cart->contents())
         }
     ?>
 </div>
+  </div>
+        </section>
