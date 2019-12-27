@@ -15,6 +15,7 @@ class Shopping extends CI_Controller {
     {
         $data['judul'] = 'Keranjang';
         $data['kategori'] = $this->Mkeranjang->get_kategori_all();
+        $data['header'] = '';
         $this->load->view('templates/header',$data);
         $this->load->view('shopping/tampil_cart',$data);
         $this->load->view('templates/footer');
@@ -24,6 +25,7 @@ class Shopping extends CI_Controller {
     {
         $data['judul'] = 'Check out';
         $data['kategori'] = $this->Mkeranjang->get_kategori_all();
+        $data['header'] = '';
         $this->load->view('templates/header',$data);
         $this->load->view('shopping/check_out',$data);
         $this->load->view('templates/footer');
@@ -31,8 +33,8 @@ class Shopping extends CI_Controller {
 
     public function check_outLogin()
     {
-            $data['title'] = ' Login page';
-
+            $data['judul'] = ' Login page';
+            $data['header'] = '';
             $this->load->view('templates/account_header', $data);
             $this->load->view('account/login');
             $this->load->view('templates/account_footer');
@@ -89,6 +91,7 @@ class Shopping extends CI_Controller {
     public function proses_order()
     {
         //-------------------------Input data pelanggan--------------------------
+
         $data_pelanggan = array('nama' => $this->input->post('nama'),
                             'email' => $this->input->post('email'),
                             'alamat' => $this->input->post('alamat'),
@@ -113,6 +116,8 @@ class Shopping extends CI_Controller {
         //-------------------------Hapus shopping cart--------------------------
         $this->cart->destroy();
         $data['kategori'] = $this->Mkeranjang->get_kategori_all();
+        $data['header'] = '';
+        $data['judul'] = 'Orderan';
         $this->load->view('templates/header',$data);
         $this->load->view('shopping/order_sukses',$data);
         $this->load->view('templates/footer');

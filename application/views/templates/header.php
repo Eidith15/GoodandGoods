@@ -165,7 +165,7 @@ $i = 1;
                     </ul>
                     <ul class="shopping__btn">
                         <li><a href="<?= base_url()?>shopping/tampil_cart">View Cart</a></li>
-                        <li class="shp__checkout"><a href="<?= base_url('login'); ?>">Checkout</a></li>
+                        <li class="shp__checkout"><a href="<?= base_url(); ?>shopping/check_out">Checkout</a></li>
                     </ul>
                 
                 </div>
