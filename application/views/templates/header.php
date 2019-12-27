@@ -117,16 +117,12 @@
 
             <div class="shopping__cart" >
                                     
-                                    <?php
-$cart = $this->cart->contents();
-        
- ?>
-                         <?php
+
+    <?php
 $grand_total = 0;
 $i = 1;
  
-foreach ($cart as $item) :
-$grand_total = $grand_total + $item['subtotal'];
+
 ?>
 
                 <div class="shopping__cart__inner">
@@ -138,7 +134,7 @@ $grand_total = $grand_total + $item['subtotal'];
 
                     <div class="shp__cart__wrap">
 
-                        <?php foreach ( $this->cart->contents() as $item) : ?>
+                        <?php foreach ( $this->cart->contents() as $item) : $grand_total = $grand_total + $item['subtotal']; ?>
                         <div class="shp__single__product">
                                 
                             <div class="shp__pro__thumb">
@@ -163,7 +159,9 @@ $grand_total = $grand_total + $item['subtotal'];
                     </div>
                        
                     <ul class="shoping__total">
-                        <li class="subtotal"><?= number_format($grand_total= $grand_total + $item['subtotal'], 0,",","."); ?></li>
+                        <li class="subtotal"><?= number_format( $grand_total, 0,",","."); ?>
+                            
+                        </li>
                     </ul>
                     <ul class="shopping__btn">
                         <li><a href="<?= base_url()?>shopping/tampil_cart">View Cart</a></li>
@@ -171,7 +169,7 @@ $grand_total = $grand_total + $item['subtotal'];
                     </ul>
                 
                 </div>
-            <?php endforeach; ?> 
+             
             </div>
             <!-- End Cart Panel -->
         </div>

@@ -84,27 +84,7 @@ class Shopping extends CI_Controller {
     }
 
  
-    function ubah_cart()
-    {
-        $cart_info = $_POST['cart'] ;
-        foreach( $cart_info as $id => $cart)
-        {
-            $rowid = $cart['rowid'];
-            $price = $cart['price'];
-            $gambar = $cart['gambar'];
-            $amount = $price * $cart['qty'];
-            $qty = $cart['qty'];
-            $data = array('rowid' => $rowid,
-                            'price' => $price,
-                            'gambar' => $gambar,
-                            'amount' => $amount,
-                            'qty' => $qty);
-            $this->cart->update($data);
-        }
-        redirect('shopping/tampil_cart');
-    }
  
-
  //CeckOut
     public function proses_order()
     {
