@@ -51,8 +51,7 @@ $grand_total = $grand_total + $item['subtotal'];
 <td colspan="3"><b>Order Total: Rp <?= number_format($grand_total, 0,",","."); ?></b></td>
 <td colspan="4" align="right">
 
-<button class ="btn btn-danger"><a href="<?=base_url()?>shopping/hapusAll" data-toggle="modal" data-target="#myModal"   rel="noopener noreferrer">Kosongkan Cart</a></button>
-<button class='btn btn-sm btn-success'  type="submit">Update Cart</button>
+
 <a href="<?=base_url()?>shopping/check_out"  class ='btn btn-sm btn-primary'>Check Out</a>
 </tr>
  

@@ -58,7 +58,7 @@
                                     <li><a href="<?= base_url(); ?>shop">Shop</a></li>
                                     <li><a href="<?= base_url(); ?>about">About</a></li>
                                     <li><a href="<?= base_url(); ?>contact">Contact</a></li>
-                                    <li><a href="<?= base_url(); ?>shopping/tampil_cart">Cart</a></li>
+                                   
                                 </ul>
                             </nav>
 
@@ -166,8 +166,8 @@ $grand_total = $grand_total + $item['subtotal'];
                         <li class="total__price">$130.00</li>
                     </ul>
                     <ul class="shopping__btn">
-                        <li><a href="<?= base_url() ?>shopping/tampil_cart">View Cart</a></li>
-                        <li class="shp__checkout"><a href="checkout.html">Checkout</a></li>
+                        <li><a href="<?= base_url()?>shopping/check_out">View Cart</a></li>
+                        <li class="shp__checkout"><a href="<?= base_url('login'); ?>">Checkout</a></li>
                     </ul>
                 
                 </div>

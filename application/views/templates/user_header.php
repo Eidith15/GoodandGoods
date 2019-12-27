@@ -190,4 +190,6 @@
             </div>
             <!-- End Cart Panel -->
         </div>
+    </div>
+
         <!-- End Offset Wrapper -->

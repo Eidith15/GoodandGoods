@@ -29,6 +29,16 @@ class Shopping extends CI_Controller {
         $this->load->view('templates/footer');
     }
 
+    public function check_outLogin()
+    {
+            $data['title'] = ' Login page';
+
+            $this->load->view('templates/account_header', $data);
+            $this->load->view('account/login');
+            $this->load->view('templates/account_footer');
+        redirect('account/login');
+    }
+
  
     function tambah()
     {
