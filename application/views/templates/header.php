@@ -79,7 +79,7 @@
                             <ul class="menu-extra">
                                 <li class="search search__open d-none d-sm-block"><span class="ti-search"></span></li>
                                 <li class="cart__menu"><span class="ti-shopping-cart"></span></li>
-                                <li><a href="<?= base_url('login'); ?>"><span class="ti-user"></span></a></li>
+                                <li><a href="<?= base_url(); ?>/login"><span class="ti-user"></span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -117,17 +117,17 @@
 
             <div class="shopping__cart" >
                                     
-                <?php
-                $cart = $this->cart->contents();
-                        
-                 ?>
-                                         <?php
-                $grand_total = 0;
-                $i = 1;
-                 
-                foreach ($cart as $item) :
-                $grand_total = $grand_total + $item['subtotal'];
-                ?>
+                                    <?php
+$cart = $this->cart->contents();
+        
+ ?>
+                         <?php
+$grand_total = 0;
+$i = 1;
+ 
+foreach ($cart as $item) :
+$grand_total = $grand_total + $item['subtotal'];
+?>
 
                 <div class="shopping__cart__inner">
 
@@ -156,7 +156,10 @@
                             <div class="remove__btn">
                                 <a href="<?= base_url()?>shopping/hapusCart/<?= $item['rowid'];?>" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
                             </div>
+                            
+                   
                         </div>
+                     <?php endforeach; ?>
                     </div>
                        
                     <ul class="shoping__total">

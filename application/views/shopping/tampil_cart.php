@@ -1,7 +1,4 @@
 
-    <!-- Bagian Keranjang static -->
-
-        <!-- END Bagian Keranjang static -->
 
 <section class="htc__product__area ptb--130 bg__white">
             <div class="container">
