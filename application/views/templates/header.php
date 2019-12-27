@@ -151,16 +151,16 @@ $grand_total = $grand_total + $item['subtotal'];
                                 <span class="quantity"><?= $item['qty']; ?></span>
                                 <span class="shp__price"><?= number_format($item['price'],0,",","."); ?></span>
                             </div>
-                            
+                           
                             <div class="remove__btn">
-                                <a href="#" title="Remove this item"><i class="zmdi zmdi-close">lele</i></a>
+                                <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
                             </div>
                             
-                  
+                   
                         </div>
-                    <?php endforeach; ?>
+                     <?php endforeach; ?>
                     </div>
-                        
+                       
                     <ul class="shoping__total">
                         <li class="subtotal">Subtotal:</li>
                         <li class="total__price">$130.00</li>

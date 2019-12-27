@@ -1,52 +1,6 @@
 
     <!-- Bagian Keranjang static -->
-  <div class="container mt-5">
-    <div class="row">
 
-      <div class="col-lg-3">
-
-        <div class="list-group">
-          <a class="list-group-item"><strong>KATEGORI</strong></a>
-          <a href="<?= base_url() ?>home/index/" class="list-group-item">Semua</a>
-          <?php
-          foreach ($kategori as $row) {
-            ?>
-            <a href="<?php echo base_url() ?>home/index/<?php echo $row['id']; ?>" class="list-group-item"><?php echo $row['nama_kategori']; ?></a>
-          <?php
-          }
-          ?>
-        </div><br>
-
-
-        <div class="list-group">
-          <a href="<?php echo base_url() ?>shopping/tampil_cart" class="list-group-item"><strong><i class="glyphicon glyphicon-shopping-cart"></i> KERANJANG BELANJA</strong></a>
-          <?php
-
-          $cart = $this->cart->contents();
-
-          // If cart is empty, this will show below message.
-          if (empty($cart)) {
-            ?>
-            <a class="list-group-item">Keranjang Belanja Kosong</a>
-            <?php
-            } else {
-              $grand_total = 0;
-              foreach ($cart as $item) {
-                $grand_total += $item['subtotal'];
-                ?>
-              <a class="list-group-item"><?php echo $item['name']; ?> (<?php echo $item['qty']; ?> x <?php echo number_format($item['price'], 0, ",", "."); ?>)=<?php echo number_format($item['subtotal'], 0, ",", "."); ?></a>
-            <?php
-              }
-              ?>
-
-          <?php
-          }
-          ?>
-        </div>
-      </div>
-      <!-- /.col-lg-3 -->
-
-      <div class="col-lg-9 mt-5">
         <!-- END Bagian Keranjang static -->
 
 <div class="container">
@@ -113,29 +67,4 @@ $grand_total = $grand_total + $item['subtotal'];
  
 
 
-  <!-- Modal Penilai -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-md">
-      <!-- Modal content-->
-      <div class="modal-content">
-        <form method="post" action="<?php echo base_url()?>shopping/hapus/all">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&amp;amp;times;</button>
-          <h4 class="modal-title">Konfirmasi</h4>
-        </div>
-        <div class="modal-body">
-            Anda yakin mau mengosongkan Shopping Cart?
- 
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">Tidak</button>
-          <button type="submit" class="btn btn-sm btn-default">Ya</button>
-        </div>
- 
-        </form>
-      </div>
- 
-    </div>
-  </div>
-  </div>
-  <!--End Modal-->
+  
