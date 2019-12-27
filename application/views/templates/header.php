@@ -37,7 +37,7 @@
     <!-- Body main wrapper start -->
     <div class="wrapper fixed__footer">
         <!-- Start Header Style -->
-        <header id="header" class="htc-header">
+        <header id="header" class="htc-header <?= $header ?>">
             <!-- Start Mainmenu Area -->
             <div id="sticky-header-with-topbar" class="mainmenu__area sticky__header">
                 <div class="container">
