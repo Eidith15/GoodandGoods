@@ -153,7 +153,7 @@ $grand_total = $grand_total + $item['subtotal'];
                             </div>
                            
                             <div class="remove__btn">
-                                <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
+                                <a href="<?= base_url()?>shopping/hapusCart/<?= $item['rowid'];?>" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
                             </div>
                             
                    

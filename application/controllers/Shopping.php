@@ -56,6 +56,23 @@ class Shopping extends CI_Controller {
             }
         redirect('shopping/tampil_cart');
     }
+
+
+        function hapusCart($rowid)
+    {
+        if ($rowid=="all")
+            {
+                $this->cart->destroy();
+            }
+        else
+            {
+                $data = array('rowid' => $rowid,
+                              'qty' =>0);
+                $this->cart->update($data);
+            }
+        redirect('home');
+    }
+
  
     function ubah_cart()
     {

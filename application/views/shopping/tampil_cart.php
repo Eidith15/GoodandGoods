@@ -3,8 +3,9 @@
 
         <!-- END Bagian Keranjang static -->
 
-<div class="container">
-  <h2>Daftar Belanja</h2>
+<section class="htc__product__area ptb--130 bg__white">
+            <div class="container">
+                <div class="htc__product__container">
 <form action="<?php echo base_url()?>shopping/ubah_cart" method="post" name="frmShopping" id="frmShopping" class="form-horizontal" enctype="multipart/form-data">
 <?php
     if ($cart = $this->cart->contents())
@@ -30,27 +31,27 @@ $i = 1;
 foreach ($cart as $item):
 $grand_total = $grand_total + $item['subtotal'];
 ?>
-<input type="hidden" name="cart[<?php echo $item['id'];?>][id]" value="<?php echo $item['id'];?>" />
-<input type="hidden" name="cart[<?php echo $item['id'];?>][rowid]" value="<?php echo $item['rowid'];?>" />
-<input type="hidden" name="cart[<?php echo $item['id'];?>][name]" value="<?php echo $item['name'];?>" />
-<input type="hidden" name="cart[<?php echo $item['id'];?>][price]" value="<?php echo $item['price'];?>" />
-<input type="hidden" name="cart[<?php echo $item['id'];?>][gambar]" value="<?php echo $item['gambar'];?>" />
-<input type="hidden" name="cart[<?php echo $item['id'];?>][qty]" value="<?php echo $item['qty'];?>" />
+<input type="hidden" name="cart[<?= $item['id'];?>][id]" value="<?= $item['id'];?>" />
+<input type="hidden" name="cart[<?= $item['id'];?>][rowid]" value="<?= $item['rowid'];?>" />
+<input type="hidden" name="cart[<?= $item['id'];?>][name]" value="<?= $item['name'];?>" />
+<input type="hidden" name="cart[<?= $item['id'];?>][price]" value="<?= $item['price'];?>" />
+<input type="hidden" name="cart[<?= $item['id'];?>][gambar]" value="<?= $item['gambar'];?>" />
+<input type="hidden" name="cart[<?= $item['id'];?>][qty]" value="<?= $item['qty'];?>" />
 <tr>
-<td><?php echo $i++; ?></td>
-<td><img class="img-thumbnail" src="<?php echo base_url() . 'assets/img/'.$item['gambar']; ?>"/></td>
-<td><?php echo $item['name']; ?></td>
-<td><?php echo number_format($item['price'], 0,",","."); ?></td>
-<td><input type="text" class="form-control input-sm" name="cart[<?php echo $item['id'];?>][qty]" value="<?php echo $item['qty'];?>" /></td>
-<td><?php echo number_format($item['subtotal'], 0,",",".") ?></td>
-<td><a href="<?php echo base_url()?>shopping/hapus/<?php echo $item['rowid'];?>" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i>Hapus</a></td>
+<td><?= $i++; ?></td>
+<td><img class="img-thumbnail" src="<?= base_url() . 'assets/img/'.$item['gambar']; ?>"/></td>
+<td><?= $item['name']; ?></td>
+<td><?= number_format($item['price'], 0,",","."); ?></td>
+<td><input type="text" class="form-control input-sm" name="cart[<?= $item['id'];?>][qty]" value="<?= $item['qty'];?>" /></td>
+<td><?= number_format($item['subtotal'], 0,",",".") ?></td>
+<td><a href="<?= base_url()?>shopping/hapus/<?= $item['rowid'];?>" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i>Hapus</a></td>
 <?php endforeach; ?>
 </tr>
 <tr>
-<td colspan="3"><b>Order Total: Rp <?php echo number_format($grand_total, 0,",","."); ?></b></td>
+<td colspan="3"><b>Order Total: Rp <?= number_format($grand_total, 0,",","."); ?></b></td>
 <td colspan="4" align="right">
 
-<button class ="btn btn-danger"><a data-toggle="modal" data-target="#myModal"   rel="noopener noreferrer">Kosongkan Cart</a></button>
+<button class ="btn btn-danger"><a href="<?=base_url()?>shopping/hapusAll" data-toggle="modal" data-target="#myModal"   rel="noopener noreferrer">Kosongkan Cart</a></button>
 <button class='btn btn-sm btn-success'  type="submit">Update Cart</button>
 <a href="<?=base_url()?>shopping/check_out"  class ='btn btn-sm btn-primary'>Check Out</a>
 </tr>
@@ -64,7 +65,9 @@ $grand_total = $grand_total + $item['subtotal'];
         }
 ?>
 </form>
- 
+                
+            </div>
+        </section>
 
 
   
