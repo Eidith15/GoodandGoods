@@ -117,17 +117,17 @@
 
             <div class="shopping__cart" >
                                     
-                                    <?php
-$cart = $this->cart->contents();
-        
- ?>
-                         <?php
-$grand_total = 0;
-$i = 1;
- 
-foreach ($cart as $item) :
-$grand_total = $grand_total + $item['subtotal'];
-?>
+                <?php
+                $cart = $this->cart->contents();
+                        
+                 ?>
+                                         <?php
+                $grand_total = 0;
+                $i = 1;
+                 
+                foreach ($cart as $item) :
+                $grand_total = $grand_total + $item['subtotal'];
+                ?>
 
                 <div class="shopping__cart__inner">
 
@@ -156,10 +156,7 @@ $grand_total = $grand_total + $item['subtotal'];
                             <div class="remove__btn">
                                 <a href="<?= base_url()?>shopping/hapusCart/<?= $item['rowid'];?>" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
                             </div>
-                            
-                   
                         </div>
-                     <?php endforeach; ?>
                     </div>
                        
                     <ul class="shoping__total">
