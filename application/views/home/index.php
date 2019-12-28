@@ -56,38 +56,44 @@
                         ?>
                         <!-- Start Single Product -->
                          
-                        <div class="col-md-3 single__pro col-lg-3 col-md-4 col-sm-12 cat--<?= $brg['kategori'] ?>">
+                                                <div class="col-md-3 single__pro col-lg-3 col-md-4 col-sm-12 cat--<?= $brg['kategori'] ?>">
+ 
+
+
                             <form method="post" action="<?php echo base_url();?>shopping/tambah" method="post" accept-charset="utf-8">
-                                <div class="product foo">
-                                    <div class="product__inner">
-                                        <div class="pro__thumb">
-                                            <a href="#">
-                                                    <img src="<?= base_url(); ?>assets/img/<?= $brg['image_barang'] ?>" alt="product images" height="350">
-                                                </a>
-                                        </div>
-                                         <div class="product__hover__info">
-                                                <ul class="product__action">
-                                                    <li><a href="<?= base_url(); ?>home/detail/<?= $brg['id_barang']; ?>"><span class="ti-plus"></span></a></li>
-                                                    <li><a href=""><span class="ti-shopping-cart"><button class="button-nostyle" type="submit"></button></span></a></li>
-                                                </ul>
-                                            </div>
-                                    </div>
-                                    <div class="product__details">
-                                      <h2 class="line-clamp">
-                                        <a href="<?= base_url(); ?>home/detail/<?= $brg['id_barang']; ?>"><?php echo $brg['nama_barang'];?></a>
-                                      </h2>
-                                        <ul class="product__price">
-                                                <li class="new__price">Rp. <?= number_format($brg['harga_barang'],0,",",".");?></li>
-                                        </ul>
-                                      
-                                      <input type="hidden" name="id" value="<?php echo $brg['id_barang']; ?>" />
-                                      <input type="hidden" name="nama" value="<?php echo $brg['nama_barang']; ?>" />
-                                      <input type="hidden" name="harga" value="<?php echo $brg['harga_barang']; ?>" />
-                                      <input type="hidden" name="gambar" value="<?php echo $brg['image_barang']; ?>" />
-                                      <input type="hidden" name="qty" value="1" />
-                                      
-                                    </div>
+                            <div class="product foo">
+                            <div class="product__inner">
+                                <div class="pro__thumb">
+                                    <a href="#">
+                                            <img src="<?= base_url(); ?>assets/img/<?= $brg['image_barang'] ?>" alt="product images" height="350">
+                                        </a>
                                 </div>
+                                 <div class="product__hover__info">
+                                        <ul class="product__action">
+                                            <li><a href=""><button type="submit" class="btn ti-shopping-cart"></a></button></li>
+                                        </ul>
+                                    </div>
+                            </div>
+                            <div class="product__details">
+                              <h2 class="line-clamp">
+                                <a href="<?= base_url(); ?>home/detail/<?= $brg['id_barang'] ?>"><?php echo $brg['nama_barang'];?></a>
+                              </h2>
+                                <ul class="product__price">
+                                        <li class="new__price">Rp. <?= number_format($brg['harga_barang'],0,",",".");?></li>
+                                </ul>
+                              
+                              <input type="hidden" name="id" value="<?php echo $brg['id_barang']; ?>" />
+                              <input type="hidden" name="nama" value="<?php echo $brg['nama_barang']; ?>" />
+                              <input type="hidden" name="harga" value="<?php echo $brg['harga_barang']; ?>" />
+                              <input type="hidden" name="gambar" value="<?php echo $brg['image_barang']; ?>" />
+                              <input type="hidden" name="qty" value="1" />
+                              
+                            </div>
+                    
+             
+                              
+                            
+                        </div>
                             </form>
                         </div>
                         

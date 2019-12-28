@@ -38,7 +38,7 @@ class Shopping extends CI_Controller {
     public function check_outLogin()
     {
 
-            $data['title'] = ' Login page';
+            
             $data['header'] = 'header--3 bg__white';
 
             $data['judul'] = ' Login page';
