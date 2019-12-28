@@ -61,6 +61,18 @@ class Shopping extends CI_Controller {
         $this->cart->insert($data_produk);
         redirect('home');
     }
+
+        function tambahCartDetail()
+    {
+        $data_produk= array('id' => $this->input->post('id'),
+                             'name' => $this->input->post('nama'),
+                             'price' => $this->input->post('harga'),
+                             'gambar' => $this->input->post('gambar'),
+                             'qty' =>$this->input->post('qty')
+                            );
+        $this->cart->insert($data_produk);
+        redirect('home/detail');
+    }
  
     function hapus($rowid)
     {

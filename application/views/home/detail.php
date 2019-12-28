@@ -1,6 +1,7 @@
  <!-- Start Product Details -->
         <section class="htc__product__details pt--120 pb--100 bg__white">
-            <div class="container">
+    <!--         <div class="container">
+                <form method="post" action="<?php echo base_url();?>shopping/tambah" method="post" accept-charset="utf-8">
                 <div class="row">
                     <div class="col-md-12 col-lg-6 col-sm-12">
                         <div class="product__details__container">
@@ -37,8 +38,8 @@
                                     </form>
                                 </div>
                             </div>
-                            <ul class="pro__dtl__btn">
-                                <li class="buy__now__btn"><a href="<?= base_url(); ?>">buy now</a></li>
+                            <ul class="pro__dtl__btn mt-5">
+                                <li class="buy__now__btn"><a href="<?php echo base_url();?>shopping/tambah">buy now</a></li>
                             </ul>
                             <div class="pro__social__share">
                                 <h2>Share :</h2>
@@ -51,8 +52,57 @@
                             </div>
                         </div>
                     </div>
+                      <input type="hidden" name="id" value="<?php echo $barang['id_barang']; ?>" />
+  <input type="hidden" name="nama" value="<?php echo $barang['nama_barang']; ?>" />
+  <input type="hidden" name="harga" value="<?php echo $barang['harga_barang']; ?>" />
+  <input type="hidden" name="gambar" value="<?php echo $barang['image_barang']; ?>" />
+  <input type="hidden" name="qty" value="1" />
                 </div>
-            </div>
+                </form>
+            </div> -->
+    <div class="container">        
+ <h2><?php echo $barang['nama_barang'];?></h2>
+<form method="post" action="<?php echo base_url();?>shopping/tambah" method="post" accept-charset="utf-8">
+<div class="row">
+    <div class="col-md-12 col-lg-6 col-sm-12 mt-2">
+<img class="img-responsive" src="<?php echo base_url() . 'assets/img/'.$barang['image_barang']; ?>"/>
+</div>
+
+<div class="col-md-12 col-lg-6 col-sm-12 mt-2">
+ <ul class="pro__dtl__prize">
+                                <li>Rp. <?= number_format($barang['harga_barang'],0,",",".");?></li>
+</ul>
+ <p class="card-text">
+    <div class="pro__details">
+<strong> <h3><u>Deskripsi</u></h3></strong><br>
+ <?php echo $barang['deskripsi_barang'];?></p>
+</div>
+
+  <input type="hidden" name="id" value="<?php echo $barang['id_barang']; ?>" />
+  <input type="hidden" name="nama" value="<?php echo $barang['nama_barang']; ?>" />
+  <input type="hidden" name="harga" value="<?php echo $barang['harga_barang']; ?>" />
+  <input type="hidden" name="gambar" value="<?php echo $barang['image_barang']; ?>" />
+  <input type="hidden" name="qty" value="1" />
+
+  <ul class="pro__dtl__btn mt-3">
+  <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-shopping-cart"></i> Beli Produk Ini</button>
+</ul>
+<div class="pro__social__share">
+                                <h2>Share :</h2>
+                                <ul class="pro__soaial__link">
+                                    <li><a href="https://twitter.com/devitemsllc" target="_blank"><i class="zmdi zmdi-twitter"></i></a></li>
+                                    <li><a href="https://www.instagram.com/devitems/" target="_blank"><i class="zmdi zmdi-instagram"></i></a></li>
+                                    <li><a href="https://www.facebook.com/devitems/?ref=bookmarks" target="_blank"><i class="zmdi zmdi-facebook"></i></a></li>
+                                    <li><a href="https://plus.google.com/" target="_blank"><i class="zmdi zmdi-google-plus"></i></a></li>
+                                </ul>
+                            </div>
+
+ </div>
+ </div>
+ </form>   
+ </div>
+
+
         </section>
         <!-- End Product Details -->
         <!-- Start Product tab -->
